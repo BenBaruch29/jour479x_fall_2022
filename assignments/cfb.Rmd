@@ -1,0 +1,49 @@
+---
+title: "CFB"
+output: html_document
+date: "2022-09-13"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+```
+
+
+```{r}
+install.packages("cfbfastR")
+```
+```{r}
+if (!requireNamespace('pacman', quietly = TRUE)){
+  install.packages('pacman')
+}
+pacman::p_load_current_gh("sportsdataverse/cfbfastR", dependencies = TRUE, update = TRUE)
+```
+```{r}
+install.packages("tictoc")
+tictoc::tic()
+pbp <- data.frame()
+seasons <- 2014:cfbfastR:::most_recent_cfb_season()
+progressr::with_progress({
+
+  pbp <- cfbfastR::load_cfb_pbp(seasons)
+})
+tictoc::toc()
+```
+
+```{r}
+glimpse(pbp)
+```
+
+
+```{r}
+pbp %>%
+  filter(new_series == 1, drive_play_number == 1, play_type == 'Penalty', down == 1) %>%
+  group_by(pos_team) %>%
+  summarize(plays = n(), games = n_distinct(game_id)) %>%
+  arrange(desc(plays))
+```
+
