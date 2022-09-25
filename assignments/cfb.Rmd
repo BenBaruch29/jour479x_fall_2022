@@ -3,6 +3,7 @@ title: "CFB"
 output: html_document
 date: "2022-09-13"
 ---
+HW FOR 9/25 STARTS ON LINE 51
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -47,3 +48,72 @@ pbp %>%
   arrange(desc(plays))
 ```
 
+9/25 ASSIGNMENT STARTS HERE
+
+```{r}
+logs <- read_csv("http://mattwaite.github.io/sportsdatafiles/footballlogs1121.csv")
+```
+```{r}
+logs <- logs %>% 
+  mutate(differential = TeamScore - OpponentScore
+  )
+head(logs)
+```
+
+```{r}
+logs <- logs %>%
+  mutate(TotalPenalties = Penalties + DefPenalties)
+
+regression <- lm(differential ~ Penalties, data = logs)
+summary(regression)
+```
+After running a linear regression test, there appears to be little relationship between differential and team penalties. Even though the p-value is less than .05, and therefore implies a statistical significance, the adjusted r-squared value is very small. A small adjusted r-squared value in this case means penalties explain less than 1% of point differential.
+
+```{r}
+regression2 <- lm(differential ~ TotalPenalties, data = logs)
+summary(regression)
+```
+When trying to use TotalPenalties, the relationship is even murkier. There is no statistical significance, and TotalPenalties explain differential far less than team penalties.
+
+```{r}
+multipleregression <-
+  lm(differential ~ 
+       Penalties + PassingPct + FirstDownTotal + Fumbles + Interceptions,
+     data = logs)
+summary(multipleregression)
+```
+Adding more columns decreased the p-value significantly, increased the adjusted r-squared  value, and decreased the residual standard error. 
+
+Some examples of "mistakes or bad outcomes" that I included in this model were fumbles and turnovers, which alone accounted for about 13% of adjusted r-squared (interceptions accounted for 11%). I also added passing percentage, positing that a team with a lower passing percentage is scoring less, which therefore contributes to a greater point differential. I also added first downs, since a team that has less first downs isn't controlling the ball, which means the other team probably is. Team performance alone accounted for about 36% of score differential.
+
+```{r}
+multipleregression <-
+  lm(differential ~ 
+       Penalties + PassingPct + FirstDownTotal + Fumbles + Interceptions + DefPenalties + DefPassingPct + DefFirstDownTotal + DefFumbles + DefInterceptions,
+     data = logs)
+summary(multipleregression)
+```
+However, I also experimented I also added defensive fumbles, interceptions, passing percentage and first downs since this could be the marking of a strong defense forcing turnovers. Indeed, this increased my adjusted r-squared value to over 64% when including all of these factors. 
+
+I found that including penalties in the model increased the adjusted r-squared value slightly and decreased the standard error slightly. I chose to keep it in the model, but acknowledge, as I learned before, that penalties have little effect on score differential in college football. Rather, completing passes, getting first downs and limiting as well as forcing your opponent into turnovers are much better indicators of the final score. 
+
+```{r}
+logs %>% filter(differential < 8, differential > -8)
+
+regression <- lm(differential ~ Penalties, data = logs)
+summary(regression)
+```
+```{r}
+logs %>% filter(differential < 8, differential > -8)
+
+multipleregression <-
+  lm(differential ~ 
+       Penalties + PassingPct + FirstDownTotal + Fumbles + Interceptions + DefPenalties + DefPassingPct + DefFirstDownTotal + DefFumbles + DefInterceptions,
+     data = logs)
+summary(multipleregression)
+```
+The p-value, adjusted r-squared and residual standard error when I filtered for close games, which I defined as games decided by less than 8 points (i.e. a touchdown). That is true for the simple and multiple regression models.
+
+This means that the regression model is impartial to blowouts or close games. The factors I included in my model will, together, consistently be good indicators of score differential. I experimented with even smaller point differentials, and I found the same output there as well, which means that this is consistent irrespective of the final score. 
+
+FINAL THOUGHTS: There is no statistically significant relationship between penalties and score differential. That might be a story, especially for a team like Maryland that's focusing a lot on its penalties this season, when it really might not be as much of a factor. However, combined with other performance indicators, it becomes significant and explanatory. Still, though, that wouldn't be a story in my opinion. A lot of the columns I added would be obvious to most coaches and fans. If you turn the ball over more, you're probably going to lose by more points and vise versa. There is little in this data that warrants a story. 
