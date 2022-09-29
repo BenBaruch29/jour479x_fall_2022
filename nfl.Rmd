@@ -14,7 +14,7 @@ library(tidyverse)
 ```{r}
 play_by_play_2022 <- readRDS("~/GitHub/jour479x_fall_2022/data/play_by_play_2022.rds") 
 glimpse(play_by_play_2022)
-McLaurinpxp <- play_by_play_2022 %>% filter(receiver == "T.McLaurin" & game_half == "Half1")
+McLaurinpxp <- play_by_play_2022 %>% filter(posteam == "WAS", receiver == "T.McLaurin",  game_half == "Half1")
 ```
 
 
