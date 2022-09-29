@@ -1,0 +1,20 @@
+---
+title: "nfl"
+output: html_document
+date: "2022-09-29"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+```
+```{r}
+play_by_play_2022 <- readRDS("~/GitHub/jour479x_fall_2022/data/play_by_play_2022.rds") 
+glimpse(play_by_play_2022)
+McLaurinpxp <- play_by_play_2022 %>% filter(receiver == "T.McLaurin" & game_half == "Half2")
+```
+
+
