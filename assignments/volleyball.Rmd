@@ -1,0 +1,124 @@
+---
+title: "volleyball"
+output: html_document
+date: "2022-09-30"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Loading the data
+```{r}
+library(tidyverse)
+library(readr)
+library(dplyr)
+library(tidyr)
+volleyball <- read.csv("https://raw.githubusercontent.com/dwillis/NCAAWomensVolleyballData/main/data/ncaa_womens_volleyball_matchstats_2022.csv")
+glimpse(volleyball) 
+```
+Recreating the data format from the tutorial. When the tutorial used per season data, we accounted for each season of each school independently. Now that we have per game data, I picked the metrics I will use throughout this assignment and summed them. Since hitting percentage is a percentage, I used the mean function instead of sum. 
+```{r}
+totals <- volleyball %>% 
+  group_by(team) %>%
+  summarise(
+    tot_kills = sum(kills),
+    tot_aces = sum(aces),
+    tot_digs = sum(digs),
+    tot_sets = sum(s),
+    tot_err = sum(errors),
+    tot_serve_err = sum(s_err),
+    tot_att = sum(total_attacks),
+    tot_hit_pct = mean(hit_pct)
+    )
+```
+For the next two blocks of code, I recreate the structure used in the tutorial. 
+```{r}
+perset <- totals %>% 
+  mutate(
+    killsperset = tot_kills/tot_sets,
+    digsperset = tot_digs/tot_sets,
+    acesperset = tot_aces/tot_sets
+  ) %>%
+  select(team, killsperset, digsperset, acesperset, tot_sets)
+```
+
+```{r}
+teamzscore <- perset %>%
+  mutate(
+    killszscore = as.numeric(scale(killsperset, center = TRUE, scale = TRUE)),
+    aceszscore = as.numeric(scale(acesperset, center = TRUE, scale = TRUE)),
+    digszscore = as.numeric(scale(digsperset, center = TRUE, scale = TRUE)),
+    TotalZscore = killszscore + aceszscore + digszscore
+  ) 
+
+Terps <- teamzscore %>% filter(team == "Maryland Terrapins, Terps")
+```
+In this model, the top three teams are Dartmouth, Princeton and SFA. Maryland ranks 206th. However, I researched the top-25 teams in Women's volleyball this year and almost none of them appeared near the top of this ranking. Arkansas was one of the few. I replaced some of the metrics and analyzed this further.
+
+New metrics:
+- Team Attacking Efficiency: (Kills - Errors) / Attacks
+- Service Errors (Calculated in data set. I wanted to calculate serving percentage, but I would need the total serves to calculate that. Unfortunately, that was not recorded in this data set)
+- Hitting percentage (Calculated in data set)
+
+Since Team Attacking Efficiency and Hitting Percentage are per-game stats, I won't modify them to be per-set. I will standardize service errors, though.
+```{r}
+new_perset <- totals %>% 
+  mutate(
+    killsperset = tot_kills/tot_sets,
+    digsperset = tot_digs/tot_sets,
+    acesperset = tot_aces/tot_sets,
+    serveerrperset = tot_serve_err / tot_sets,
+    att_eff = ((tot_kills - tot_err) / tot_att) * 100
+  ) %>%
+  select(team, tot_sets, killsperset, digsperset, acesperset, serveerrperset, att_eff, tot_hit_pct)
+```
+Z-scores for our new metrics
+```{r}
+new_teamzscore <- new_perset %>%
+  mutate(
+    att_effzscore = as.numeric(scale(att_eff, center = TRUE, scale = TRUE)),
+    serveerrzscore = as.numeric(scale(serveerrperset, center = TRUE, scale = TRUE)),
+    hit_pctzscore = as.numeric(scale(tot_hit_pct, center = TRUE, scale = TRUE)),
+    TotalZscore = att_effzscore + serveerrzscore + hit_pctzscore
+  ) %>% 
+  arrange(desc(TotalZscore)) 
+
+new_Terps <- new_teamzscore %>% filter(team == "Maryland Terrapins, Terps")
+```
+Using only the new metrics, USC, Georgia and Towson are the three best teams in Volleyball. Maryland ranks 77th overall with a total z-score of about 1.7. However, there is an interesting anomaly here. Texas Tech is ranked 76th, but has a 13-2 record and are undefeated in Big 12 play. Below them in 78th in San Francisco, and they have a 7-8 record. The serving error z-score is likely at fault here. Texas Tech has a strong attacking efficiency and hitting percentage, but has committed many serving errors. San Francisco is the exact opposite: a poor attacking efficiency and hitting percentage, but has very few serving errors. What this shows is that one individual z-score can affect the overall z-score. Perhaps this means serving errors are better indicators of success. However, I arranged the data in terms of descending serving error z-score, and that didn't appear to reflect the top-25 either. 
+
+Maryland is middle-of-the-pack in all of these metrics. However, in this range of data, it appears Texas Tech is the outlier. After conducting some research, most of the teams surrounding Maryland have similar records. 
+
+I also went back to the top-25 list. Louisville, ranked second in the AVCA rankings, appeared 10th on this list. Gerorgia, USC and Towson are all unranked, though Towson (15-0) received some votes for the most recent poll. Arkansas, Washington and Oregon are all teams ranked in the top-25 that appeared toward the top of this list, though all were outside the top-25 on the AVCA rankings. For further analysis, I'll now combine these results with the base metrics used in the tutorial
+```{r}
+overallteamzscore <- new_perset %>%
+  mutate(
+    killszscore = as.numeric(scale(killsperset, center = TRUE, scale = TRUE)),
+    aceszscore = as.numeric(scale(acesperset, center = TRUE, scale = TRUE)),
+    digszscore = as.numeric(scale(digsperset, center = TRUE, scale = TRUE)),
+    att_effzscore = as.numeric(scale(att_eff, center = TRUE, scale = TRUE)),
+    hit_pctzscore = as.numeric(scale(tot_hit_pct, center = TRUE, scale = TRUE)),
+    newTotalZscore = killszscore + aceszscore + digszscore + att_effzscore + hit_pctzscore
+  ) %>% 
+  arrange(desc(newTotalZscore)) 
+
+overall_Terps <- overallteamzscore %>% filter(team == "Maryland Terrapins, Terps")
+```
+After further deliberation, I decided to remove serve errors. Since more serve errors reflects poorly on a team (as opposed to the other metrics where more of that metric reflects positively), it was contributing to a total z-score that didn't properly reflect overall team succes.
+
+Now the top three teams are Princeton, Towson and Arkansas. It makes sense that Towson appears in the latter two models, as they have a 15-0 record. Maryland, sitting at 9-6 and yet to record a conference win, ranks 127th in this model. They're ranked near 13-3 Colgate 8-6 Weber State. Texas Tech jumped back up to 39th place, which makes more sense given their strong record. Number one Texas comes in at 12th, lower than 6th on newteamzscore, but much higher than 69th on our original model. Number three Nebraska, however was ranked as low as 110th. They're middle of the pack on most stats, but really struggle with aces. Colgate is in a similar situation. 
+
+It's still tough to tell which model is used better metrics since one statistic can throw the whole model off. Bringing those metrics back in this third model hurt some of the good teams ranked lower on the first model, though it helped account for some of the outliers the second model revealed. However, something that I'm curious of is whether removing aces will help correct for teams like Nebraska and Colgate.
+```{r}
+noserveszscore <- new_perset %>% mutate(
+    killszscore = as.numeric(scale(killsperset, center = TRUE, scale = TRUE)),
+    digszscore = as.numeric(scale(digsperset, center = TRUE, scale = TRUE)),
+    att_effzscore = as.numeric(scale(att_eff, center = TRUE, scale = TRUE)),
+    hit_pctzscore = as.numeric(scale(tot_hit_pct, center = TRUE, scale = TRUE)),
+    newTotalZscore = killszscore + digszscore + att_effzscore + hit_pctzscore
+  ) %>% 
+  arrange(desc(newTotalZscore)) 
+```
+I removed aces, though not much changed. Texas is still ranked around 9th, and unranked Princeton is still at the top. Going back to the third model. Despite its now apparent flaws, it still represented volleyball teams fairly accurately, and probably hinted to some insights about teams that might deserve higher rankings. I wasn't able to test the metrics I proposed on the quiz due to a lack of available data, though I wonder if they will provide an even better representation. I did some experimentation on the side where I arranged by attacking efficiency. Texas ranked first, though second place Louisville was in 10th, and most of the other top-10 teams were nowhere to be found. What I can conclude is that these metrics don't reflect the general public's overall perception of the top NCAA women's volleyball teams. That could mean the top-25 doesn't mean much, and that wouldn't surprise me since 15-0 Towson is ranked highly on these models, but not in the top-25. The opposite would be true as well. I would need to conduct significance test and correlation models to figure that out with certainty. 
+
+However, I think the second and third models much better represented the middle-of-the-pack teams. In a league with so many (good) teams, it's hard to pinpoint which ones are the best, since strength of schedule is major factor in college sports. But the middling teams with similar records might not be so similar (also because of strength of schedule), and that's why this model works better for slightly worse teams. What's certainly true in any event, is that more (or at least different) data and more analysis are required to better model NCAA women's volleyball. 
