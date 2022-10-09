@@ -1,0 +1,22 @@
+For my presentation I chose the following question: "are special teams really a factor in determining regular season or playoff success in hockey?" In hockey, special teams are defined as power play and penalty kill percentage, opportunities when a team has a manpower advantage or disadvantage. In order to define regular season success, I'll use points percentage, and total playoff wins to define playoff success. 
+
+While I thought about summing data from the post-lockout NHL era (from 2005-2006 until today), I decided that would provide an inaccurate portrayal of this relationship. The five teams with the highest points percentages since the lockout are the Vegas Golden Knights, Washington Capitals, Pittsburgh Penguins, Boston Bruins and San Jose Sharks. It makes sense, since the latter four teams boasted some of the league's best players in the last 15 years, specifically Alex Ovechkin, Sidney Crosby, Patrice Bergeron and Joe Thornton. Teams like the Edmonton Oilers, Toronto Maple Leafs, Florida Panthers and 2022 Stanley Cup Champion Colorado Avalanche have been much more successful in the past five years and have much lower points percentages than the first five teams. Therefore, I'll limit the results to the last five years of the NHL, starting in 2016-2017. That way, we can get a better sense of what effect special teams has on overall team success right now. 
+
+The data for this project is available at NHL.com/stats. Some outlets have already cast doubt on the assumption that special teams success leads to points and wins. This article (https://puckprose.com/2019/03/26/current-state-special-teams-nhl/) from puckprose notes that while penalty killing might be an indicator of playoff success, power play success is far less indicative. This (https://www.theglobeandmail.com/sports/hockey/globe-on-hockey/how-much-do-special-teams-matter-in-the-playoffs/article614086/) older article from The Globe and Mail, points out that special teams percentages often decline during the playoffs anyway, so their effectiveness might not be indicative throughout a team's season. This (https://hockey-graphs.com/2016/01/14/special-teams-analytics-in-the-21st-century/) article from hockey-grpahs takes a backwards approach and tries to understand how and when teams succeed on the powerplay.  
+
+In the code block below, I'll load the datat. The first file I upload is a summation of each team's team stats from 2016-17 to 2021-22. The second sheet has each team's individual season data. 
+```{r}
+library("tidyverse")
+library("dplyr")
+library(tidyr)
+nhl_stats_16_21 <- read.csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/nhl16_21stats.xlsx - Summary.csv")
+comprehensive_stats <- read.csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/FULLNHL.xlsx - Summary.csv")
+```
+A glimpse of each dataset
+```{r}
+glimpse(nhl_stats_16_21)
+```
+```{r}
+glimpse(comprehensive_stats)
+```
+
