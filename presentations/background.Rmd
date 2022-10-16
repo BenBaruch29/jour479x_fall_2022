@@ -20,3 +20,41 @@ glimpse(nhl_stats_16_21)
 glimpse(comprehensive_stats)
 ```
 
+In order to get a basic sense of the correlation between special teams and team success, we're going to make a few scatter plots. The first will plot team regular season wins against power play percentage. We'll make a total of four:
+Reg. season points percentage vs. PP 
+Reg. season points percentage vs. PK
+Playoff W vs. PP 
+Playoff W vs. PK
+For the purposes of this presentation, team percentages, not the gaps between them, are more important. This is especially true since we're looking at data from different seasons. We're investigating whether/when these two variables are correlated, not comparing one team to another. 
+
+```{r}
+library(ggplot2)
+
+ggplot() + geom_point(data=comprehensive_stats, aes(x=P., y=PP.))
+```
+Next, penalty kill percentage and regular season wins
+
+```{r}
+ggplot() + geom_point(data=comprehensive_stats, aes(x=P., y=PK.))
+```
+So in the regular season, it seems like PP% is slightly more telling. Now, let's load some playoff data from the last few years and try the same thing. 
+```{r}
+playoffs <- read.csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/playoffs.csv")
+
+ggplot() + geom_point(data=playoffs, aes(x=W, y=PP.))
+```
+```{r}
+ggplot() + geom_point(data=playoffs, aes(x=W, y=PK.))
+```
+There is clearly a much smaller correlation come playoff time. That's because some teams were swept, and still had great special teams. I'll run this code again after limiting the results to teams that advanced past the first round of the playoffs (at least 4 wins).
+
+```{r}
+second_round <- playoffs %>% 
+  filter(W >= 4)
+
+ggplot() + geom_point(data=second_round, aes(x=W, y=PP.))
+```
+```{r}
+ggplot() + geom_point(data=second_round, aes(x=W, y=PK.))
+```
+Still not much of a correlation, but that's something we'll clearly have to investigate further. 
