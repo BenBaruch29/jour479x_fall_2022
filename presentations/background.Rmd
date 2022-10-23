@@ -1,3 +1,5 @@
+--Data Backgrounding--
+
 For my presentation I chose the following question: "are special teams really a factor in determining regular season or playoff success in hockey?" In hockey, special teams are defined as power play and penalty kill percentage, opportunities when a team has a manpower advantage or disadvantage. In order to define regular season success, I'll use points percentage, and total playoff wins to define playoff success. 
 
 While I thought about summing data from the post-lockout NHL era (from 2005-2006 until today), I decided that would provide an inaccurate portrayal of this relationship. The five teams with the highest points percentages since the lockout are the Vegas Golden Knights, Washington Capitals, Pittsburgh Penguins, Boston Bruins and San Jose Sharks. It makes sense, since the latter four teams boasted some of the league's best players in the last 15 years, specifically Alex Ovechkin, Sidney Crosby, Patrice Bergeron and Joe Thornton. Teams like the Edmonton Oilers, Toronto Maple Leafs, Florida Panthers and 2022 Stanley Cup Champion Colorado Avalanche have been much more successful in the past five years and have much lower points percentages than the first five teams. Therefore, I'll limit the results to the last five years of the NHL, starting in 2016-2017. That way, we can get a better sense of what effect special teams has on overall team success right now. 
@@ -20,6 +22,8 @@ glimpse(nhl_stats_16_21)
 glimpse(comprehensive_stats)
 ```
 
+--Exploration--
+
 In order to get a basic sense of the correlation between special teams and team success, we're going to make a few scatter plots. The first will plot team regular season wins against power play percentage. We'll make a total of four:
 Reg. season points percentage vs. PP 
 Reg. season points percentage vs. PK
@@ -29,22 +33,27 @@ For the purposes of this presentation, team percentages, not the gaps between th
 
 ```{r}
 library(ggplot2)
-
-ggplot() + geom_point(data=comprehensive_stats, aes(x=P., y=PP.))
+ggplot() + 
+  geom_point(data=comprehensive_stats, aes(x=P., y=PP.)) 
 ```
-Next, penalty kill percentage and regular season wins
+Next, penalty kill percentage and regular season wins    
 
 ```{r}
-ggplot() + geom_point(data=comprehensive_stats, aes(x=P., y=PK.))
+ggplot() + 
+  geom_point(data=comprehensive_stats, aes(x=P., y=PK.))   
 ```
 So in the regular season, it seems like PP% is slightly more telling. Now, let's load some playoff data from the last few years and try the same thing. 
 ```{r}
 playoffs <- read.csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/playoffs.csv")
 
-ggplot() + geom_point(data=playoffs, aes(x=W, y=PP.))
+ggplot() +
+  geom_point(data=playoffs, aes(x=W, y=PP.)) 
 ```
+
+
 ```{r}
-ggplot() + geom_point(data=playoffs, aes(x=W, y=PK.))
+ggplot() + 
+  geom_point(data=playoffs, aes(x=W, y=PK.)) 
 ```
 There is clearly a much smaller correlation come playoff time. That's because some teams were swept, and still had great special teams. I'll run this code again after limiting the results to teams that advanced past the first round of the playoffs (at least 4 wins).
 
@@ -58,3 +67,130 @@ ggplot() + geom_point(data=second_round, aes(x=W, y=PP.))
 ggplot() + geom_point(data=second_round, aes(x=W, y=PK.))
 ```
 Still not much of a correlation, but that's something we'll clearly have to investigate further. 
+
+--Refining--
+
+To start the refining process, I'm going to take a step back, and investigate some correlations from some of the data plotted last week. From this, we'll be able to see if special teams has an affect on team performance, and when. Let's start with what looked like the most promising correlation, power play percentage and regular season points percentage. 
+
+```{r}
+TBL <- comprehensive_stats %>% filter(Team == "Tampa Bay Lightning", Season == "20182019")
+ggplot() + 
+  geom_point(data=comprehensive_stats, aes(x=P., y=PP.)) +
+  geom_point(data=TBL, aes(x=P., y=PP.), color="blue")
+```
+
+```{r}
+fit <- lm(P. ~ PP., data = comprehensive_stats)
+summary(fit)
+```
+There is clearly a correlation here. First, the p-value is really small, so the relationship is certainly statistically significant. The adjusted R-squared is nearly 34%, which means power play percentage explains about 34% of regular season points percentage. The residual standard error is also really low. I also went back to the scatterplot for this data and highlighted the 2018-2019 Tampa Bay Lightning. They had a 28.2% power play scoring rate (second best in our time frame), and finished the season with a .78 points percentage, the best in the NHL since the 1995-1996 Detriot Red Wings. Yet they were swept in the first round by the Columbus Blue Jackets, who had never won a playoff series in their existence to that point. That's what I think the data is going to tell us. Teams can have juggernaut power plays during the regular season, beating up on bad teams around the league. But once you're playing the same team again and again in the playoffs, that matters a whole lot less. All in all, promising results to start. 
+
+```{r}
+NYI <- comprehensive_stats %>% filter(Team == "New York Islanders", Season == "20212022")
+ggplot() + 
+  geom_point(data=comprehensive_stats, aes(x=P., y=PK.)) +
+  geom_point(data=TBL, aes(x=P., y=PK.),color = "blue") +
+  geom_point(data=NYI, aes(x=P., y=PK.),color = "orange")  
+```
+
+```{r}
+fit <- lm(P. ~ PK., data = comprehensive_stats)
+summary(fit)
+```
+This one is a bit more interesting. We saw on the graph that there might be less of a relationship here than with power play percentage and that's certainly true. Although the residual standard error is about the same, the adjusted R-squared went down to just over 21%. Most interesting, however, is the p-value, which is now way over .05. That means there is no statistical significance here. Again, I highlighted the 18-19 Lightning on our scatterplot. They had a great penalty kill, but other teams also had great penalty kills and didn't do as well as they did in the regular season. One example is the 2021-2022 New York Islanders, who I also highlighted on my scatterplot. They had an 84% penalty kill percentage last season yet finished with a points percentage over .512 and missed the playoffs for the first time in three years. On top of that, they have a 100% penalty kill through five games this season, yet their record is 2-3-0 (at the time of writing). Small sample size, but I think, based on this data, that's telling. I assume playoffs are going to be even murkier. 
+
+```{r}
+STL <- playoffs %>% filter(Team == "St. Louis Blues", Season == "20182019")
+TBLcup20 <- playoffs %>% filter(Team == "Tampa Bay Lightning", Season == "20192020")
+ggplot() +
+  geom_point(data=playoffs, aes(x=W, y=PP.)) +
+  geom_point(data=STL, aes(x=W, y=PP.), color = "gold") +
+  geom_point(data=TBLcup20, aes(x=W, y=PP.), color = "blue")
+```
+
+
+```{r}
+fit <- lm(W ~ PP., data = playoffs)
+summary(fit)
+```
+Again, a really interesting result. Let's start with the p-value. It's greater than .05, but not by much. However, the adjusted R-squared i s about 2.5%, which means power play isn't really leading to wins, and if it is, the standard error is really big compared to what we've seen until now. Let's see if reducing the data to the second round helps. 
+
+```{r}
+fit <- lm(W ~ PP., data = second_round)
+summary(fit)
+```
+It makes it worse. That probably makes sense. The games get tougher in the playoffs, which means getting and scoring on power plays is much harder than in even the first round. Power play goals come at weird times in the playoffs and teams need to have much more going for them than a good power play to win in the postseason. Is penalty kill the same? 
+
+```{r}
+ggplot () + 
+  geom_point(data=playoffs, aes(x=W, y=PK.)) +
+  geom_point(data=STL, aes(x=W, y=PK.), color = "gold") +
+  geom_point(data=TBLcup20, aes(x=W, y=PK.), color = "blue")
+```
+
+
+```{r}
+fit <- lm(W ~ PK., data = playoffs)
+summary(fit)
+```
+Yup, not much correlation at all here either. It's the same problem that we had with power plays in the playoffs. It's all about defense in the postseason. Teams can have a perfect penalty kill and still lose their first four games. If they're not scoring at even strength, they're probably not going to win. Something I'll investigate further is that hypothesis. Since it seems that special teams are much less of a factor come playoff time, how indicative is five on five scoring? Let's run the same query for second round teams just to be safe. 
+
+```{r}
+fit <- lm(W ~ PK., data = second_round)
+summary(fit)
+```
+Yup, hardly any relationship. In fact, the adjusted R-squared is negative here. Going back to my scatterplots, I decided to highlight the 2018-2019 St. Louis Blues and the 2019-2020 Tampa Bay Lightning. Both won the Cup, but Tampa did so with far superior special teams. Most teams with a 16% power play and a 75% penalty kill wouldn't be sniffing the playoffs most years. Meanwhile, Tampa's 22% power play and 86% penalty kill seem much more like a team poised to make a deep playoff run. In St. Louis' case though, the story that season was the outstanding play of rookie goalie Jordan Binnington. Indeed, their scoring output during their cup run (2.88 goals/game), was the lowest among Stanley Cup winners in our time frame. Despite having a poor penalty kill percentage, they played well enough at even strength to make up for it. 
+
+What we've learned was that power play percentage is indicative of good teams during the regular season. The team that scores the most goals will probably win, and a good power play will help you do that. Penalty kill is less indicative, and both special teams percentages mean almost nothing come playoff time. The next step is to try and figure out what leads to playoff success. 
+
+I have a hunch, just from a quick glimpse at the data, that goal differential might tell a story. Let's take a look. We'll use the overall playoffs data to start. 
+
+```{r}
+playoffs_differential <- playoffs %>% 
+  mutate(goal_differential = GF.GP - GA.GP) %>% 
+  arrange(desc(goal_differential))
+
+ggplot () + 
+  geom_point(data=playoffs_differential, aes(x=W, y=goal_differential))
+
+fit <- lm(W ~ goal_differential, data = playoffs_differential)
+summary(fit)
+
+head(playoffs_differential)
+```
+Although it's relatively obvious, we got something. The top-two teams both won the Stanley Cup, and four out of the six reached the Stanley Cup Final. Washington, at 6th also won the Cup. The p-value is really small and the adjusted R-squared is over 40%. There's just one red flag, standard error. Here's why. 
+
+```{r}
+secondround_differential <- second_round %>% 
+  mutate(goal_differential = GF.GP - GA.GP) %>%
+  arrange(desc(goal_differential))
+
+ggplot () + 
+  geom_point(data = secondround_differential, aes(x=W, y=goal_differential))
+
+fit <- lm(W ~ goal_differential, data = secondround_differential)
+summary(fit)
+
+head(secondround_differential)
+```
+Restrict the data to the second round and beyond, and you've got a whole new scatterplot. The really bad teams that were handled in the first round aren't here any more and things tightened up. As such, the p-value got much closer to .05 and the adjusted R-squared went down to about 20%. Maybe not as intuitive as we though, though it should be noted the Stanley Cup winners (16+ wins) have some of the highest goal differentials on this scatterplot. The exception is the St. Louis Blues. 
+
+Something else we can look at is teams that have good power plays and penalty kills during the playoffs. 
+
+```{r}
+fit <- lm(W ~ PP., PK., data = playoffs)
+summary(fit)
+```
+Statisically signifcant, but not much relationship. Here's what that looks like on a scatterplot. 
+
+```{r}
+cumspecial_teams <- playoffs %>% 
+  mutate (specialteams_total = PK. + PP.) %>% 
+  arrange(desc(specialteams_total))
+
+ggplot() +
+  geom_point(data=cumspecial_teams, aes(x=W, y=specialteams_total))
+
+head(cumspecial_teams)
+```
+This is far less promising than goal differential. Washington was bumped in the first round. They had a perfect penalty kill last summer against the Florida Panthers, but lost in six games. The 2018-2019 Boston Bruins and the 2020-2021 Tampa Bay Lightning all reached the Stanley Cup Final, but this data isn't very telling. Clearly, there's more than just one factor that goes into postseason success in the NHL. While power play is a big factor during the regular season, a team can't depend on it after 82 games. 
