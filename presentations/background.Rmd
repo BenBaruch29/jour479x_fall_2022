@@ -35,12 +35,16 @@ For the purposes of this presentation, team percentages, not the gaps between th
 library(ggplot2)
 ggplot() + 
   geom_point(data=comprehensive_stats, aes(x=P., y=PP.)) 
+
+#seequery1
 ```
 Next, penalty kill percentage and regular season wins    
 
 ```{r}
 ggplot() + 
   geom_point(data=comprehensive_stats, aes(x=P., y=PK.))   
+
+#seequery2
 ```
 So in the regular season, it seems like PP% is slightly more telling. Now, let's load some playoff data from the last few years and try the same thing. 
 ```{r}
@@ -48,12 +52,16 @@ playoffs <- read.csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_202
 
 ggplot() +
   geom_point(data=playoffs, aes(x=W, y=PP.)) 
+
+#seequery3
 ```
 
 
 ```{r}
 ggplot() + 
   geom_point(data=playoffs, aes(x=W, y=PK.)) 
+
+#seequery4
 ```
 There is clearly a much smaller correlation come playoff time. That's because some teams were swept, and still had great special teams. I'll run this code again after limiting the results to teams that advanced past the first round of the playoffs (at least 4 wins).
 
@@ -62,9 +70,13 @@ second_round <- playoffs %>%
   filter(W >= 4)
 
 ggplot() + geom_point(data=second_round, aes(x=W, y=PP.))
+
+#seequery5
 ```
 ```{r}
 ggplot() + geom_point(data=second_round, aes(x=W, y=PK.))
+
+#seequery6
 ```
 Still not much of a correlation, but that's something we'll clearly have to investigate further. 
 
@@ -77,6 +89,8 @@ TBL <- comprehensive_stats %>% filter(Team == "Tampa Bay Lightning", Season == "
 ggplot() + 
   geom_point(data=comprehensive_stats, aes(x=P., y=PP.)) +
   geom_point(data=TBL, aes(x=P., y=PP.), color="blue")
+
+#seequery7
 ```
 
 ```{r}
@@ -91,6 +105,8 @@ ggplot() +
   geom_point(data=comprehensive_stats, aes(x=P., y=PK.)) +
   geom_point(data=TBL, aes(x=P., y=PK.),color = "blue") +
   geom_point(data=NYI, aes(x=P., y=PK.),color = "orange")  
+
+#seequery8
 ```
 
 ```{r}
@@ -106,6 +122,8 @@ ggplot() +
   geom_point(data=playoffs, aes(x=W, y=PP.)) +
   geom_point(data=STL, aes(x=W, y=PP.), color = "gold") +
   geom_point(data=TBLcup20, aes(x=W, y=PP.), color = "blue")
+
+#seequery9
 ```
 
 
@@ -126,6 +144,8 @@ ggplot () +
   geom_point(data=playoffs, aes(x=W, y=PK.)) +
   geom_point(data=STL, aes(x=W, y=PK.), color = "gold") +
   geom_point(data=TBLcup20, aes(x=W, y=PK.), color = "blue")
+
+#seequery10
 ```
 
 
@@ -157,6 +177,8 @@ fit <- lm(W ~ goal_differential, data = playoffs_differential)
 summary(fit)
 
 head(playoffs_differential)
+
+#seequery11
 ```
 Although it's relatively obvious, we got something. The top-two teams both won the Stanley Cup, and four out of the six reached the Stanley Cup Final. Washington, at 6th also won the Cup. The p-value is really small and the adjusted R-squared is over 40%. There's just one red flag, standard error. Here's why. 
 
@@ -172,6 +194,8 @@ fit <- lm(W ~ goal_differential, data = secondround_differential)
 summary(fit)
 
 head(secondround_differential)
+
+#seequery12
 ```
 Restrict the data to the second round and beyond, and you've got a whole new scatterplot. The really bad teams that were handled in the first round aren't here any more and things tightened up. As such, the p-value got much closer to .05 and the adjusted R-squared went down to about 20%. Maybe not as intuitive as we though, though it should be noted the Stanley Cup winners (16+ wins) have some of the highest goal differentials on this scatterplot. The exception is the St. Louis Blues. 
 
@@ -192,5 +216,7 @@ ggplot() +
   geom_point(data=cumspecial_teams, aes(x=W, y=specialteams_total))
 
 head(cumspecial_teams)
+
+#seequery13
 ```
 This is far less promising than goal differential. Washington was bumped in the first round. They had a perfect penalty kill last summer against the Florida Panthers, but lost in six games. The 2018-2019 Boston Bruins and the 2020-2021 Tampa Bay Lightning all reached the Stanley Cup Final, but this data isn't very telling. Clearly, there's more than just one factor that goes into postseason success in the NHL. While power play is a big factor during the regular season, a team can't depend on it after 82 games. 
