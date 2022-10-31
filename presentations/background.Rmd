@@ -167,11 +167,12 @@ I have a hunch, just from a quick glimpse at the data, that goal differential mi
 
 ```{r}
 playoffs_differential <- playoffs %>% 
-  mutate(goal_differential = GF.GP - GA.GP) %>% 
+  mutate(goal_differential = GF - GA) %>% 
   arrange(desc(goal_differential))
 
 ggplot () + 
-  geom_point(data=playoffs_differential, aes(x=W, y=goal_differential))
+  geom_point(data=playoffs_differential, aes(x=W, y=goal_differential)) +
+  geom_smooth(data = playoffs_differential, aes(x=W, y=goal_differential), method="lm")
 
 fit <- lm(W ~ goal_differential, data = playoffs_differential)
 summary(fit)
@@ -184,11 +185,15 @@ Although it's relatively obvious, we got something. The top-two teams both won t
 
 ```{r}
 secondround_differential <- second_round %>% 
-  mutate(goal_differential = GF.GP - GA.GP) %>%
+  mutate(goal_differential = GF - GA) %>%
   arrange(desc(goal_differential))
 
+Stanley_Cup <- secondround_differential %>% filter(W >= 16)
+
 ggplot () + 
-  geom_point(data = secondround_differential, aes(x=W, y=goal_differential))
+  geom_point(data = secondround_differential, aes(x=W, y=goal_differential)) +
+  geom_point(data = Stanley_Cup, aes(x=W, y=goal_differential), color = "gold") +
+  geom_smooth(data = secondround_differential, aes(x=W, y=goal_differential), method="lm")
 
 fit <- lm(W ~ goal_differential, data = secondround_differential)
 summary(fit)

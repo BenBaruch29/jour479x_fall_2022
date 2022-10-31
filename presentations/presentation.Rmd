@@ -1,0 +1,238 @@
+---
+title: "presentation"
+output: html_document
+date: "2022-10-30"
+---
+
+The 2018-2019 Tampa Bay Lightning won 62 games in the regular season, tying the 1995-1996 Detroit Red Wings for the most in a single season. Their .780 points percentage is the sixth best in the NHL's expansion era (post 1967-1968). Supporting that incredible run was a 28.2% power play scoring percentage, the second highest in the last five full seasons. They also had an 85% penalty killing percentage.
+
+But that success didn't translate to the postseason. Their power play success rate dipped to 16.7%, and the Lightning were swept by the Columbus Blue Jackets, a team that had never won a playoff series in its existence. Not only was the dip in power play percentage alarming, their penalty killing percentage dropped to 50% in the playoffs. 
+
+In this project, I want to find out if this is a normal occurrence, especially for good regular season teams. Does regular season special teams (PP% and PK%) success transfer to the postseason, and into playoff wins? 
+
+```{r}
+library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(ggalt)
+library(ggrepel)
+nhl_stats_16_21 <- read.csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/nhl16_21stats.xlsx - Summary.csv")
+comprehensive_stats <- read.csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/FULLNHL.xlsx - Summary.csv")
+playoffs <- read.csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/playoffs.csv")
+```
+
+When I was first experimenting with the data, I used scatterplots to try and answer my question. I found that running correlation analyses highlights the relationships that are most significant. 
+
+We'll first run our correlation analyses for regular season special teams percentage. I'll compare PP% and PK% to regular season points percentage and try to find a relationship.
+
+```{r}
+fit <- lm(P. ~ PP., data = comprehensive_stats)
+summary(fit)
+```
+And regular season points percentage and penalty killing percentage:
+
+```{r}
+fit <- lm(P. ~ PK., data = comprehensive_stats)
+summary(fit)
+```
+
+First of all, I decided to use regular season points percentage instead of regular season wins because of 2020. The season was cut short due to COVID-19, and the playoffs were determined by points percentage, as opposed to wins and points. So to standardize for the rest of our time frame (from 2016-2017 to 2021-2022), I decided to use points percentage. 
+
+Both power play percentage and penalty killing percentage have a statistically significant relationship with regular season points percentage. However, comparing the adjusted R-squared values for both metrics, power play percentage explains more of regular season points percentage than penalty killing percentage. We can see that when we plot both relationships on a scatterplot. 
+
+```{r}
+TBL <- comprehensive_stats %>% filter(Team == "Tampa Bay Lightning")
+NYI <- comprehensive_stats %>% filter(Team == "New York Islanders")
+
+ggplot() + 
+  geom_point(data=comprehensive_stats, aes(x=P., y=PP.), color="grey") +
+  geom_point(data=TBL, aes(x=P., y=PP.), color="blue") +
+  geom_point(data=NYI, aes(x=P., y=PP.), color="orange") +
+  geom_smooth(data=comprehensive_stats, aes(x=P., y=PP.), method="lm") +
+  labs(title="Strong Power Play Leads to Regular Season Points", subtitle="Power Play Percentage has a statistically significant relationship with regular season points percentage", caption="Source: NHL | By Ben Baruch") + 
+  theme(
+    plot.title = element_text(size = 18, face = "bold"),
+    axis.title = element_text(size = 12), 
+    plot.subtitle = element_text(size=10), 
+    panel.grid.minor = element_blank()
+    ) +
+  xlab("Regular Season Points Percentage") +
+  ylab("Regular Season Power Play Percentage")
+
+ggplot() + 
+  geom_point(data=comprehensive_stats, aes(x=P., y=PK.), color="grey") +
+  geom_point(data=TBL, aes(x=P., y=PK.), color="blue") +
+  geom_point(data=NYI, aes(x=P., y=PK.), color="orange") +
+  geom_smooth(data=comprehensive_stats, aes(x=P., y=PK.), method="lm") +
+  labs(title="Penalty Kill Doesn't Always Lead to Points", subtitle="There's a statisitically significant relationship here, but not as strong as power play", caption="Source: NHL | By Ben Baruch") + 
+  theme(
+    plot.title = element_text(size = 18, face = "bold"),
+    axis.title = element_text(size = 12), 
+    plot.subtitle = element_text(size=10), 
+    panel.grid.minor = element_blank()
+    ) + 
+  xlab("Regular Season Points Percentage") +
+  ylab("Regular Season Penalty Kill Percentage")
+```
+
+In general, both of these plots show a positive correlation. However, the slope of the best-fit line on the PP% scatterplot is steeper than the PK% one. We also know from our correlation analyses that the relationship is stronger, which explains the steeper slope. From this, we can conclude that special teams certainly has an effect on regular season points percentage. That's especially true for PP%. But there have been notable exceptions to the model that are worth discussing. 
+
+I highlighted the Lightning in blue, and the New York Islanders in orange. In the PP% scatterplot, note how the Lightning are always near and along the best fit line. They're an offensive team with superstars like Steven Stamkos, Nikita Kucherov and Victor Hedman. As such, they've had winning records each of the last five seasons and have had solid power play percentages supporting them. Yet even though strong special teams carried them to two championships in the last five years, the season in which they had their best regular season special teams percentages in the last five years ended in a first round sweep. 
+
+On the other hand, the Islanders had league average winning percentages from 2018-2019 through 2020-2021, but had deep playoff runs in each season. In the last two, they were ousted by the Lightning en route to two Stanley Cups. They did this without a point-per-game player. Their last was Mathew Barzal in 2017-2018. Last season, they missed the playoffs and had a worse points percentage, but had a better penalty killing percentage than the other four previous seasons. 
+
+Their power play percentage is also all over the place. Their two best seasons in terms of points percentage featured the worst power play percentages they recorded in the last five seasons. They're a defensive-oriented team, which makes sense why they usually play better when their penalty kill is clicking. Still, they lack the offense to supplement a good defensive game. They ranked in the bottom half of goals scored per game in four of the last five seasons. They're an example of a team that doesn't quite fit the model.
+
+This is already posing a threat to my initial hypothesis. Sure, there are teams that had great success on special teams both in the regular season and playoffs. Those teams went deep in the playoffs and some won the Stanley Cup. But there are plenty of examples, like the two I mentioned above, that don't entirely fit the model. What I found out next when I tried the same correlation analyses, but used playoff data instead of regular season, showed that good regular season special teams units don't necessarily perform well in the playoffs, or lead a team to a championship. 
+
+```{r}
+ggplot() +
+  geom_point(data=playoffs, aes(x=W, y=PP.)) +
+  geom_smooth(data=playoffs, aes(x=W, y=PP.), method="lm") +   
+  labs(title="Playoff Power Play Percentage", subtitle="There's no significant a relationship between PP% and playoff wins", caption="Source: NHL | By Ben Baruch") + 
+  theme(
+    plot.title = element_text(size = 18, face = "bold"),
+    axis.title = element_text(size = 12), 
+    plot.subtitle = element_text(size=10), 
+    panel.grid.minor = element_blank()
+    ) + 
+  xlab("Playoff Wins") +
+  ylab("Playoff Power Play Percentage")
+
+ggplot() +
+  geom_point(data=playoffs, aes(x=W, y=PK.)) +
+  geom_smooth(data=playoffs, aes(x=W, y=PK.), method="lm") +   
+  labs(title="Playoff Penalty Kill Percentage", subtitle="There's no relationship between PK% and playoff wins", caption="Source: NHL | By Ben Baruch") + 
+  theme(
+    plot.title = element_text(size = 18, face = "bold"),
+    axis.title = element_text(size = 12), 
+    plot.subtitle = element_text(size=10), 
+    panel.grid.minor = element_blank()
+    ) + 
+  xlab("Playoff Wins") +
+  ylab("Playoff Penalty Kill Percentage")
+```
+These are relatively flat lines, which already indicate little relationship. To confirm, let's run correlation analyses for both. 
+
+```{r}
+fit <- lm(W ~ PP., data = playoffs)
+summary(fit)
+```
+
+```{r}
+fit <- lm(W ~ PK., data = playoffs)
+summary(fit)
+```
+The relationship between power play percentage and playoff wins is almost statistically significant (.056). The relationship between penalty killing percentage and playoff wins is not at all (.143). Both adjusted R-squared values are also really low. I thought a way to salvage this data was to limit my results to the second round and beyond, but I found that the opposite was true. The games got harder, and tighter, so any effect special teams had on the result of a game became more random.
+
+So what happened? In this next block of code, I'm going to use one season of data to compare teams' special teams percentages during the regular season and the playoffs. I looked at other seasons, and they seemed to yield similar results, which is why I'm comfortable limiting my sample size for clarity. I'll use a dumbbell chart to show this relationship. The longer each line in the chart, the greater discrepancy between regular and postseason special teams success. 
+
+In order to make this dumbbell chart, I have to make two new dataframes, which I'll call PP_difference and PK_difference. In order to make them, I'll join the comprehensive_stats and playoffs dataframes we used above. I'll join them on team and season to identify each individual team. Each of those dataframes has 104 observations, since it accounts for all five seasons of data which we're examining. In order to make a clear dumbbell chart, I'll restrict my data to the 2019-2020 season using filter. I'll explain why I chose that season later.  
+
+```{r}
+PP_difference <- inner_join(comprehensive_stats, playoffs, by=c('Team'='Team', 'Season'='Season')) %>% 
+  mutate(
+    difference = PP..x - PP..y
+  ) %>% 
+  arrange(desc(difference))
+
+PP_difference_2020 <- PP_difference %>% filter(Season=="20192020")
+
+ggplot() + 
+  geom_dumbbell(
+    data=PP_difference_2020,
+    aes(y=reorder(Team, PP..x), x=PP..x, xend=PP..y),
+    size=1,
+    colour_x = "green",
+    colour_xend = "red") +
+   theme_minimal() +   
+  labs(title="2020 Power Play Differential", subtitle="Which team's power plays got better or worse between the regular season and the playoffs?", caption="Source: NHL | By Ben Baruch") + 
+  theme(
+    plot.title = element_text(size = 18, face = "bold"),
+    axis.title = element_text(size = 12), 
+    plot.subtitle = element_text(size=10), 
+    panel.grid.minor = element_blank()
+    ) + 
+  xlab("Power Play Percentage") +
+  ylab("Team")
+
+PK_difference <- inner_join(comprehensive_stats, playoffs, by=c('Team'='Team', 'Season'='Season')) %>% 
+  mutate(
+    difference = PK..x - PK..y
+  ) %>% 
+  arrange(desc(difference))
+
+PK_difference_2020 <- PK_difference %>% filter(Season=="20192020")
+
+ggplot() + 
+  geom_dumbbell(
+    data=PK_difference_2020,
+    aes(y=reorder(Team, PK..x), x=PK..x, xend=PK..y),
+    size=1,
+    colour_x = "green",
+    colour_xend = "red") +
+   theme_minimal() +   
+  labs(title="2020 Penalty Kill Differential", subtitle="Which team's penalty kills got better or worse between the regular season and the playoffs?", caption="Source: NHL | By Ben Baruch") + 
+  theme(
+    plot.title = element_text(size = 18, face = "bold"),
+    axis.title = element_text(size = 12), 
+    plot.subtitle = element_text(size=10), 
+    panel.grid.minor = element_blank()
+    ) + 
+  xlab("Penalty Kill Percentage") +
+  ylab("Team")
+```
+
+In this chart, the green dots represent a team's special team's percentage during the regular season. The red dots represent its success rate in the playoffs. The line represents the change from regular season to postseason. 
+
+Some background on this data. The top power play team in the 2019-2020 regular season was the Edmonton Oilers. They continued their dominance in the postseason but were ousted by the Chicago Blackhawks in the qualifying round. However, the Lightning, who had a great regular season power play, also replicated that success in the postseason and won the Stanley Cup. An overall theme, though, is that most teams had lower postseason power play percentages than in the regular season. Even the exceptions saw a mixed bag of results. The Florida Panthers lost to the Islanders in the qualifying round. The Islanders, themselves an outlier, made it to the Conference Finals and lost to the Tampa Bay Lightning. 
+
+On the other side, 11 out of the 24 teams had better penalty kills in the postseason than during the regular season, about half of qualifying teams. But the Capitals, Penguins, Canadiens and Maple Leafs (as I'll expand on later) were all early exits. Still, the Lightning were a team that increased their penalty killing percentage and won the Cup. Alternatively, Dallas reached the Stanley Cup Finals with a sub-80% PK%. The data is all over the place, and there doesn't seem to be a pattern. The charts, and the aforementioned correlation analyses support that. 
+
+Some of the teams on this scatterplot played three games, and others played 27. Take a look at the New York Rangers, who had a 22.9% power play percentage during the regular season, but scored on less than 5% in the playoffs. They were ousted by the Carolina Hurricanes (84% PK percentage) in the qualifying round. In the playoffs, all it takes is three bad games, and your season is over. 
+
+Still, the opposite is also true. The Toronto Maple Leafs and Pittsburgh Penguins both had perfect penalty kills in the qualifying round. They were both eliminated in five games. The Maple Leafs weren't even killing 80% of their penalties during the regular season. They faced off against an already weak Columbus power play, but Columbus was better at even strength. So coaches shouldn't be banking on their power play in the playoffs. Teams need to excel at other aspects of the game in order to win when it matters most.
+
+My hypothesis is that since teams are playing the same opponent repeatedly during the playoffs, special teams becomes much less of a factor. If a good power play team runs into a good penalty killing team, one of those are going to give. That means that in order to make it further in the playoffs, a team needs far more than good special teams. Even strength play, team defense, goal differential, cumulative special teams and goaltending are things which I believe become more important come playoff time. I investigated some of these theories, to the best that I could with the data available, and struggled to find a single factor that conclusively influences playoff success. 
+
+Goal differential (specifically after the second round), was the most statistically significant indicator of postseason wins I could find. Goal differential is the difference between goals for and goals against. I limited my results to the second round to filter out really bad playoff teams that skew the data. I used two dataframes to get the data I needed using filter and mutate. Of all the teams that failed to make it past round one of the playoffs in my time frame, only five had a positive goal differential. Stanley Cup winning teams are highlighted in gold. 
+
+I started by making a new dataframe that restricted my playoff data to the second round and beyond using filter. Then, I mutated that dataframe to create a goal differential column. I also made a Stanley Cup dataframe, which I later used to highlight the Stanley Cup winners in my time frame. 
+
+```{r}
+second_round <- playoffs %>% filter(W >= 4)
+
+secondround_differential <- second_round %>% 
+  mutate(goal_differential = GF - GA) %>%
+  arrange(desc(goal_differential))
+
+Stanley_Cup <- secondround_differential %>% filter(W >= 16)
+
+ggplot () + 
+  geom_point(data = secondround_differential, aes(x=W, y=goal_differential)) +
+  geom_point(data = Stanley_Cup, aes(x=W, y=goal_differential), color = "gold") +
+  geom_smooth(data = secondround_differential, aes(x=W, y=goal_differential), method="lm") +
+  labs(title="Playoff Goal Differential", subtitle="The teams that won the Stanley Cup turned out to be some of the most dominant", caption="Source: NHL | By Ben Baruch") + 
+  theme(
+    plot.title = element_text(size = 18, face = "bold"),
+    axis.title = element_text(size = 12), 
+    plot.subtitle = element_text(size=10), 
+    panel.grid.minor = element_blank()
+    ) + 
+  xlab("Playoff Wins") +
+  ylab("Goal Differential")
+
+fit <- lm(W ~ goal_differential, data = secondround_differential)
+summary(fit)
+
+head(secondround_differential)
+```
+
+All but one Stanley Cup winner is above that blue line. It looks like there are only five gold dots when there are six Stanley Cup champions in our timeframe. However, both the 2020-2021 Lightning and the 2021-2022 Colorado Avalanche had a goal differential of +30.
+
+According to the correlation analysis, the relationship is statistically significant, and goal differential accounts for 38.5% of playoff wins. 
+
+This is promising, but clearly not the whole story. This was outside the scope of my initial question though, and finding data to answer a lot of these questions (for both regular season and playoffs) was difficult.  
+
+To return to and answer our original question, having good special teams percentages during the regular season doesn't mean they'll translate to the postseason, or lead to postseason wins. There's a good chance that if your power play is clicking during the regular season, you'll have a pretty high points percentage. That's less true with penalty killing, though still pretty indicative. However, special teams is not a good factor in determining playoff success, both for power play and penalty kill percentage.
