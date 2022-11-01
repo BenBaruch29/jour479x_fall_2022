@@ -77,7 +77,7 @@ ggplot() +
 ```
 
 In general, both of these plots show a positive correlation. However, the slope of the best-fit line on the PP% scatterplot is steeper than the PK% one. We also know from our correlation analyses that the relationship is stronger, which explains the steeper slope. From this, we can conclude that special teams certainly has an effect on regular season points percentage. That's especially true for PP%. But there have been notable exceptions to the model that are worth discussing. 
-
+==
 I highlighted the Lightning in blue, and the New York Islanders in orange. In the PP% scatterplot, note how the Lightning are always near and along the best fit line. They're an offensive team with superstars like Steven Stamkos, Nikita Kucherov and Victor Hedman. As such, they've had winning records each of the last five seasons and have had solid power play percentages supporting them. Yet even though strong special teams carried them to two championships in the last five years, the season in which they had their best regular season special teams percentages in the last five years ended in a first round sweep. 
 
 On the other hand, the Islanders had league average winning percentages from 2018-2019 through 2020-2021, but had deep playoff runs in each season. In the last two, they were ousted by the Lightning en route to two Stanley Cups. They did this without a point-per-game player. Their last was Mathew Barzal in 2017-2018. Last season, they missed the playoffs and had a worse points percentage, but had a better penalty killing percentage than the other four previous seasons. 
