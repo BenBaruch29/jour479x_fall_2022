@@ -1,0 +1,68 @@
+---
+title: "Second Presentation"
+output: html_document
+date: "2022-11-20"
+---
+
+```{r}
+library(tidyverse)
+library(dplyr)
+```
+
+```{r}
+skaters22 <- read_csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/skaters 22-23.csv")
+skaters21 <- read_csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/skaters 21-22.csv")
+skaters20 <- read_csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/skaters 20-21.csv")
+salaries21 <- read_csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/22-23 NHL Salaries - Sheet1.csv")
+salaries22 <- read_csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/21-22 NHL Salaries - Sheet1.csv")
+```
+The first thing I noticed after I loaded the data is that each player is listed multiple times. Each represents a different scenario of play (5v5, special teams, etc.). For the sake of simplicity, I'll narrow it down to all situations using filter. 
+
+```{r}
+all_skaters20 <- skaters20 %>% filter(situation == "all")
+all_skaters21 <- skaters21 %>% filter(situation == "all")
+all_skaters22 <- skaters22 %>% filter(situation == "all")
+```
+
+The next problem I find is in salaries 22. This data was arranged by salary, but I want to arrange by cap hit. The reason I'm doing this is because cap hit matters more in determining a player's worth to a team. There's a whole bunch of tricks teams could use to fenagle the salary cap. For example, Connor McDavid's "salary" is $1,000,000. HoIver, other contract bonuses give him a $12.5 million annual cap hit. So I'm going to oragnize this salaries22 by descending cap hit.
+
+```{r}
+colnames(salaries21)[1] = "Player"
+colnames(salaries21)[2] = "Position"
+colnames(salaries21)[3] = "Cap_Hit"
+colnames(salaries22)[3] = "Cap_Hit"
+salaries22 <- salaries22 %>% arrange(Cap_Hit)
+salaries21 <- salaries21 %>% arrange(Cap_Hit)
+```
+
+After running the code above, it's clear there's a lot of cleaning to be done. I have to remove the final two decimal places from salaries22, and there's also an extra space between the dollar sign and the amount in salaries21. It might be best to remove it altogether.
+
+```{r}
+salaries21$Cap_Hit <- gsub(",", "", salaries21$Cap_Hit)
+salaries22$Cap_Hit <- gsub(",", "", salaries22$Cap_Hit)
+salaries21$Cap_Hit <- gsub("\\$", "", salaries21$Cap_Hit)
+salaries22$Cap_Hit <- gsub("\\$", "", salaries22$Cap_Hit)
+salaries22$Cap_Hit <- gsub(" ", "", salaries22$Cap_Hit)
+salaries21$Cap_Hit <- as.numeric(salaries21$Cap_Hit)
+salaries22$Cap_Hit <- as.numeric(salaries22$Cap_Hit)
+salaries22 <- salaries22 %>% arrange(desc(Cap_Hit))
+salaries21 <- salaries21 %>% arrange(desc(Cap_Hit))
+```
+
+Now the only thing left to clean is in salaries21. The team name is in the same column as the player name. I can separate them. 
+
+```{r}
+salaries21 <- salaries21 %>% separate(col=Player, into=c("First_Name", "Last_Name", "Tm"), sep=" ", extra="merge") 
+salaries21$Player <- paste(salaries21$First_Name, salaries21$Last_Name, sep=" ")
+salaries21 <- salaries21[c("Player", "Tm", "Position", "Cap_Hit")]
+```
+
+I'm not so concerned with the position in salaries21 right now because I might not use it anyway. The important thing is now I have clean data from last season and this NHL season. I imported 2020-21 just in case, but that was a funky year anyway (COVID re-alignment) so it might be best to leave it out. 
+
+```{r}
+colnames(all_skaters21)[3] = "Player"
+colnames(all_skaters22)[3] = "Player"
+joined21 = all_skaters21 %>% inner_join(salaries21, by="Player")
+```
+
+Right now, my biggest question (and next step in this process) is figuring out how to discern which players were worth their contract based on cap hit and game score. Then I group bad players into their respective teams and compile rankings. I'm still having trouble joining each year's salary and player data into two dataframes. I'll need these to start my analysis and see game scores and salary data side by side. Any help on this would be appreciated, as well as any ideas on defining a "bad contract," perhaps a cutoff where game score and salary become mismatched.
