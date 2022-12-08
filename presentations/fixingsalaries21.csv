@@ -1,0 +1,1757 @@
+Player,Tm,Position,Cap_Hit
+"Connor McDavid
+",EDM,C,12500000
+"Artemi Panarin
+",NYR,LW,11642857
+"Auston Matthews
+",TOR,C,11640250
+"Erik Karlsson
+",SJS,D,11500000
+"John Tavares
+",TOR,C,11000000
+"Drew Doughty
+",LAK,D,11000000
+"Mitchell Marner
+",TOR,RW,10903000
+"Carey Price
+",MTL,G,10500000
+"Patrick Kane
+",CHI,RW,10500000
+"Jonathan Toews
+",CHI,C,10500000
+"Jack Eichel
+",VGK,C,10000000
+"Sergei Bobrovsky
+",FLA,G,10000000
+"Anze Kopitar
+",LAK,C,10000000
+"Tyler Seguin
+",DAL,C,9850000
+"Mark Stone
+",VGK,RW,9500000
+"Alex Ovechkin
+",WAS,LW,9500000
+"Andrei Vasilevskiy
+",TBL,G,9500000
+"Nikita Kucherov
+",TBL,RW,9500000
+"Evgeni Malkin
+",PIT,C,9500000
+"Jamie Benn
+",DAL,LW,9500000
+"Mikko Rantanen
+",COL,RW,9250000
+"Nicklas Backstrom
+",WAS,C,9200000
+"Roman Josi
+",NSH,D,9059000
+"Jeff Skinner
+",BUF,LW,9000000
+"Cale Makar
+",COL,D,9000000
+"P.K. Subban
+",NJD,D,9000000
+"Dougie Hamilton
+",NJD,D,9000000
+"Kirill Kaprizov
+",MIN,LW,9000000
+"Alex Pietrangelo
+",VGK,D,8800000
+"Sidney Crosby
+",PIT,C,8700000
+"Leon Draisaitl
+",EDM,C,8500000
+"Steven Stamkos
+",TBL,C,8500000
+"Sebastian Aho
+",CAR,LW,8460250
+"Miro Heiskanen
+",DAL,D,8450000
+"Claude Giroux
+",FLA,C,8275000
+"Jakub Voracek
+",CBJ,RW,8250063
+"Blake Wheeler
+",WPG,RW,8250000
+"Oliver Ekman-Larsson
+",VAN,D,8250000
+"Brady Tkachuk
+",OTT,LW,8208571
+"Thomas Chabot
+",OTT,D,8000000
+"John Carlson
+",WAS,D,8000000
+"Matt Duchene
+",NSH,C,8000000
+"Ryan Johansen
+",NSH,C,8000000
+"Brent Burns
+",SJS,D,8000000
+"Logan Couture
+",SJS,C,8000000
+"Jacob Trouba
+",NYR,D,8000000
+"Victor Hedman
+",TBL,D,7875000
+"Shea Weber
+",MTL,D,7857143
+"Quinn Hughes
+",VAN,D,7850000
+"Evgeny Kuznetsov
+",WAS,C,7800000
+"Andrei Svechnikov
+",CAR,RW,7750000
+"Jared Spurgeon
+",MIN,D,7575000
+"Ryan O'Reilly
+",STL,C,7500000
+"Vladimir Tarasenko
+",STL,RW,7500000
+"Aaron Ekblad
+",FLA,D,7500000
+"Patrik Laine
+",CBJ,RW,7500000
+"Elias Pettersson
+",VAN,C,7350000
+"Nico Hischier
+",NJD,C,7250000
+"Kris Letang
+",PIT,D,7250000
+"Clayton Keller
+",ARI,C,7150000
+"Kevin Hayes
+",PHI,C,7142857
+"Kyle Connor
+",WPG,LW,7142857
+"Max Pacioretty
+",VGK,LW,7000000
+James Van,"Riemsdyk
+ PHI",LW,7000000
+"Gabriel Landeskog
+",COL,LW,7000000
+"Anders Lee
+",NYI,C,7000000
+"Mathew Barzal
+",NYI,C,7000000
+"Marc-Edouard Vlasic
+",SJS,D,7000000
+"Matthew Tkachuk
+",CGY,LW,7000000
+"Joe Pavelski
+",DAL,C,7000000
+"Marc-Andre Fleury
+",MIN,G,7000000
+"William Nylander
+",TOR,C,6962366
+"Brent Seabrook
+",TBL,D,6875000
+"Patrice Bergeron
+",BOS,C,6875000
+"Ryan Kesler
+",ARI,C,6875000
+"Philip Kessel
+",ARI,RW,6800000
+"Ivan Provorov
+",PHI,D,6750000
+"Brayden Point
+",TBL,C,6750000
+"Ryan McDonagh
+",TBL,D,6750000
+"Mark Giordano
+",TOR,D,6750000
+"Johnny Gaudreau
+",CGY,LW,6750000
+"David Pastrnak
+",BOS,RW,6666666
+"Brendan Gallagher
+",MTL,RW,6500000
+"Justin Faulk
+",STL,D,6500000
+"Brayden Schenn
+",STL,C,6500000
+"Torey Krug
+",STL,D,6500000
+"Sam Reinhart
+",FLA,C,6500000
+"Cam Fowler
+",ANA,D,6500000
+"Chris Kreider
+",NYR,LW,6500000
+"Alexander Debrincat
+",CHI,RW,6400000
+"John Gibson
+",ANA,G,6400000
+"Sean Monahan
+",CGY,C,6375000
+"Nathan MacKinnon
+",COL,C,6300000
+"Jeff Petry
+",MTL,D,6250000
+"Matthew Murray
+",OTT,G,6250000
+"Ryan Ellis
+",PHI,D,6250000
+"Joshua Morrissey
+",WPG,D,6250000
+"Alexander Radulov
+",DAL,RW,6250000
+"Connor Hellebuyck
+",WPG,G,6166666
+"Mark Scheifele
+",WPG,C,6125000
+"Brad Marchand
+",BOS,LW,6125000
+"Jesperi Kotkaniemi
+",CAR,C,6100035
+"Dylan Larkin
+",DET,C,6100000
+"Jordan Staal
+",CAR,C,6000000
+"Jordan Binnington
+",STL,G,6000000
+"Filip Forsberg
+",NSH,C,6000000
+"Johnny Boychuk
+",BUF,D,6000000
+"Rasmus Dahlin
+",BUF,D,6000000
+"Kyle Okposo
+",BUF,RW,6000000
+"Nikolaj Ehlers
+",WPG,LW,6000000
+"Erik Johnson
+",COL,D,6000000
+"Jake Guentzel
+",PIT,C,6000000
+"Brock Nelson
+",NYI,C,6000000
+"Taylor Hall
+",BOS,LW,6000000
+"Timo Meier
+",SJS,LW,6000000
+"Loui Eriksson
+",ARI,RW,6000000
+"Milan Lucic
+",CGY,LW,6000000
+"Tyler Myers
+",VAN,D,6000000
+"Jacob Markstrom
+",CGY,G,6000000
+"Mats Zuccarello-Aasen
+",MIN,RW,6000000
+"Mathew Dumba
+",MIN,D,6000000
+"Jonas Brodin
+",MIN,D,6000000
+"Nate Schmidt
+",WPG,D,5950000
+"Phillip Grubauer
+",SEA,G,5900000
+"William Karlsson
+",VGK,C,5900000
+"Jonathan Huberdeau
+",FLA,LW,5900000
+"Aleksander Barkov
+",FLA,C,5900000
+"Cameron Atkinson
+",PHI,RW,5875000
+"Neal Pionk
+",WPG,D,5875000
+"Dustin Brown
+",LAK,RW,5875000
+"Brock Boeser
+",VAN,RW,5875000
+"Nick Schmaltz
+",ARI,C,5850000
+"Adam Henrique
+",ANA,C,5825000
+"Pavel Buchnevich
+",STL,LW,5800000
+"Jonathan Quick
+",LAK,G,5800000
+"Esa Lindell
+",DAL,D,5800000
+"T.J. Oshie
+",WAS,RW,5750000
+"Adam Pelech
+",NYI,D,5750000
+"Anthony Mantha
+",WAS,RW,5700000
+"Igor Shesterkin
+",NYR,G,5666667
+"Jacob Muzzin
+",TOR,D,5625000
+"Tomas Hertl
+",SJS,C,5625000
+"Darnell Nurse
+",EDM,D,5600000
+"Duncan Keith
+",EDM,D,5538462
+"Jordan Eberle
+",SEA,RW,5500000
+"Jaden Schwartz
+",SEA,LW,5500000
+"Jonathan Drouin
+",MTL,LW,5500000
+"Josh Anderson
+",MTL,RW,5500000
+"Nick Leddy
+",STL,D,5500000
+"Colton Parayko
+",STL,D,5500000
+"Zach Hyman
+",EDM,C,5500000
+"Travis Konecny
+",PHI,C,5500000
+"Jason Zucker
+",PIT,LW,5500000
+"Gustav Nyquist
+",CBJ,RW,5500000
+"Phillip Danault
+",LAK,C,5500000
+"Andrew Ladd
+",ARI,LW,5500000
+"Bo Horvat
+",VAN,C,5500000
+"Anton Stralman
+",ARI,D,5500000
+"Teuvo Teravainen
+",CAR,C,5400000
+"Seth Jones
+",CHI,D,5400000
+"Rasmus Ristolainen
+",PHI,D,5400000
+"Oliver Bjorkstrand
+",CBJ,RW,5400000
+"Mika Zibanejad
+",NYR,C,5350000
+"Mikael Backlund
+",CGY,C,5350000
+"Max Domi
+",CAR,LW,5300000
+"Jaccob Slavin
+",CAR,D,5300000
+"Ondrej Palat
+",TBL,LW,5300000
+"Patric Hornqvist
+",FLA,RW,5300000
+"Bryan Little
+",ARI,C,5291000
+"Jeff Carter
+",PIT,C,5272727
+"Jakub Vrana
+",DET,LW,5250000
+"Alec Martinez
+",VGK,D,5250000
+"Brady Skjei
+",CAR,D,5250000
+"Nino Niederreiter
+",CAR,RW,5250000
+"Charlie Coyle
+",BOS,C,5250000
+"J.T. Miller
+",VAN,C,5250000
+"Jakob Silfverberg
+",ANA,RW,5250000
+Joel Eriksson,"Ek
+ MIN",C,5250000
+"Hampus Lindholm
+",BOS,D,5205556
+"Shea Theodore
+",VGK,D,5200000
+"Yanni Gourde
+",SEA,C,5166666
+"Thomas Wilson
+",WAS,RW,5166666
+"Ryan Nugent-Hopkins
+",EDM,C,5125000
+"Dmitry Orlov
+",WAS,D,5100000
+"Kevin Fiala
+",MIN,LW,5100000
+"Danny DeKeyser
+",DET,D,5000000
+"Reilly Smith
+",VGK,RW,5000000
+"Evgenii Dadonov
+",VGK,LW,5000000
+"Robin Lehner
+",VGK,G,5000000
+"Jonathan Marchessault
+",VGK,C,5000000
+"Tyler Johnson
+",CHI,C,5000000
+"Mikael Granlund
+",NSH,C,5000000
+"Juuse Saros
+",NSH,G,5000000
+"Pierre-Luc Dubois
+",WPG,LW,5000000
+"Samuel Girard
+",COL,D,5000000
+"Morgan Rielly
+",TOR,D,5000000
+"T.J. Brodie
+",TOR,D,5000000
+"Zachary Werenski
+",CBJ,D,5000000
+"Ryan Pulock
+",NYI,D,5000000
+"Jean-Gabriel Pageau
+",NYI,C,5000000
+"Semyon Varlamov
+",NYI,G,5000000
+"Josh Bailey
+",NYI,LW,5000000
+"Kyle Palmieri
+",NYI,RW,5000000
+"Linus Ullmark
+",BOS,G,5000000
+"Thatcher Demko
+",VAN,G,5000000
+"Alex Goligoski
+",MIN,D,5000000
+"Drake Batherson
+",OTT,C,4975000
+"Noah Hanifin
+",CGY,D,4950000
+"Conor Garland
+",VAN,RW,4950000
+"Ben Bishop
+",DAL,G,4916667
+"Andre Burakovsky
+",COL,LW,4900000
+"Charles Mcavoy
+",BOS,D,4900000
+"Blake Coleman
+",CGY,C,4900000
+"Michael Matheson
+",PIT,D,4875000
+"Elias Lindholm
+",CGY,C,4850000
+"Anthony Cirelli
+",TBL,C,4800000
+"Mikhail Sergachev
+",TBL,D,4800000
+"Tyler Bertuzzi
+",DET,LW,4750000
+"Vincent Trocheck
+",CAR,C,4750000
+"Colin White
+",OTT,C,4750000
+"Alex Tuch
+",BUF,RW,4750000
+"Kevin Labanc
+",SJS,RW,4725000
+"Travis Sanheim
+",PHI,D,4675000
+"Jamie Oleksiak
+",SEA,D,4600000
+"Jakob Chychrun
+",ARI,D,4600000
+Calvin de,"Haan
+ CHI",D,4550000
+"Rasmus Andersson
+",CGY,D,4550000
+"Shayne Gostisbehere
+",ARI,D,4500000
+"Ryan Strome
+",NYR,C,4500000
+"Alexander Wennberg
+",SEA,C,4500000
+"Frederik Andersen
+",CAR,G,4500000
+"Mike Hoffman
+",MTL,LW,4500000
+"Nikita Zaitsev
+",OTT,D,4500000
+"Brandon Saad
+",STL,LW,4500000
+"Tyson Barrie
+",EDM,D,4500000
+"Mikko Koskinen
+",EDM,G,4500000
+"Nazem Kadri
+",COL,C,4500000
+"Darcy Kuemper
+",COL,G,4500000
+"Tomas Tatar
+",NJD,LW,4500000
+"Chris Tanev
+",CGY,D,4500000
+"Christian Dvorak
+",MTL,C,4450000
+"Alexander Killorn
+",TBL,C,4450000
+"Sam Bennett
+",FLA,C,4425000
+"Filip Hronek
+",DET,D,4400000
+"John Marino
+",PIT,D,4400000
+"Sean Couturier
+",PHI,C,4333333
+"Viktor Arvidsson
+",LAK,LW,4250000
+"John Klingberg
+",DAL,D,4250000
+"Tyler Toffoli
+",CGY,RW,4250000
+"Oscar Klefbom
+",EDM,D,4167000
+"Damon Severson
+",NJD,D,4166666
+"Anthony Beauvillier
+",NYI,LW,4150000
+"Jonathan Bernier
+",NJD,G,4125000
+"Josh Manson
+",COL,D,4100000
+"Devon Toews
+",COL,D,4100000
+"Brian Dumoulin
+",PIT,D,4100000
+"Brandon Carlo
+",BOS,D,4100000
+"Olli Maatta
+",LAK,D,4083333
+"Jake Gardiner
+",CAR,D,4050000
+"Marcus Pettersson
+",PIT,D,4025175
+"Brett Pesce
+",CAR,D,4025000
+"Vince Dunn
+",SEA,D,4000000
+"Victor Rask
+",SEA,C,4000000
+"Adam Larsson
+",SEA,D,4000000
+"David Perron
+",STL,LW,4000000
+"Jake McCabe
+",CHI,D,4000000
+"Justin Schultz
+",WAS,D,4000000
+"Elvis Merzlikins
+",CBJ,G,4000000
+"Alex Iafallo
+",LAK,C,4000000
+"Ilya Sorokin
+",NYI,G,4000000
+"Carter Hart
+",PHI,G,3979000
+"Joonas Donskoi
+",SEA,RW,3900000
+"Andrew Shaw
+",CHI,C,3900000
+"Brenden Dillon
+",WPG,D,3900000
+"Kevin Shattenkirk
+",ANA,D,3900000
+"Colin Miller
+",BUF,D,3875000
+"Connor Murphy
+",CHI,D,3850000
+"Petr Mrazek
+",TOR,G,3800000
+"Nick Foligno
+",BOS,LW,3800000
+"Rickard Rakell
+",PIT,C,3789444
+"Mattias Ekholm
+",NSH,D,3750000
+"Paul Stastny
+",WPG,C,3750000
+"Boone Jenner
+",CBJ,C,3750000
+"Nikita Zadorov
+",CGY,D,3750000
+"Will Butcher
+",BUF,D,3733333
+"Dominik Kubalik
+",CHI,LW,3700000
+"Matthew Grzelcyk
+",BOS,D,3687500
+"Jake DeBrusk
+",BOS,LW,3675000
+"Cameron Talbot
+",MIN,G,3666666
+"Ryan Suter
+",DAL,D,3650000
+"Barclay Goodrow
+",NYR,LW,3641666
+"Andrew Copp
+",NYR,C,3640000
+"Thomas Greiss
+",DET,G,3600000
+"Connor Brown
+",OTT,RW,3600000
+"Brandon Tanev
+",SEA,C,3500000
+"Chris Driedger
+",SEA,G,3500000
+"David Savard
+",MTL,D,3500000
+"Joel Edmundson
+",MTL,D,3500000
+"Chris Tierney
+",OTT,C,3500000
+"Lars Eller
+",WAS,C,3500000
+"Ben Chiarot
+",FLA,D,3500000
+"Brandon Montour
+",FLA,D,3500000
+"J.T Compher
+",COL,C,3500000
+"Tristan Jarry
+",PIT,G,3500000
+"Bryan Rust
+",PIT,RW,3500000
+"Alexander Kerfoot
+",TOR,C,3500000
+"Alexander Edler
+",LAK,D,3500000
+"Cal Clutterbuck
+",NYI,RW,3500000
+"Micheal Ferland
+",VAN,LW,3500000
+"Paul Byron
+",MTL,C,3400000
+"Joel Armia
+",MTL,RW,3400000
+"Andreas Johnsson
+",NJD,LW,3400000
+"Marco Scandella
+",STL,D,3275000
+"Pius Suter
+",DET,C,3250000
+"Cody Ceci
+",EDM,D,3250000
+"MacKenzie Weegar
+",FLA,D,3250000
+"Adam Lowry
+",WPG,LW,3250000
+"Radek Faksa
+",DAL,C,3250000
+"Tanner Pearson
+",VAN,LW,3250000
+"Dmitrij Jaskin
+",ARI,RW,3200000
+"Zack Kassian
+",EDM,RW,3200000
+"Kasperi Kapanen
+",PIT,RW,3200000
+"Ryan Graves
+",NJD,D,3166666
+"Matt Roy
+",LAK,D,3150000
+"Roope Hintz
+",DAL,LW,3150000
+"Craig Smith
+",BOS,C,3100000
+"Marcus Foligno
+",MIN,LW,3100000
+"Victor Olofsson
+",BUF,RW,3050000
+"Ryan Getzlaf
+",ANA,C,3000000
+"Mike Reilly
+",BOS,D,3000000
+"Ryan Lindgren
+",NYR,D,3000000
+"Jay Beagle
+",ARI,RW,3000000
+"Antoine Roussel
+",ARI,LW,3000000
+"Alex Nedeljkovic
+",DET,G,3000000
+"Travis Hamonic
+",OTT,D,3000000
+"Dylan Strome
+",CHI,C,3000000
+"Scott Laughton
+",PHI,C,3000000
+"Oskar Lindblom
+",PHI,LW,3000000
+"Anthony Duclair
+",FLA,LW,3000000
+"Dylan Demelo
+",WPG,D,3000000
+"Derek Forbort
+",BOS,D,3000000
+"Robby Fabbri
+",DET,C,2950000
+"Erik Cernak
+",TBL,D,2950000
+"Jared McCann
+",SEA,LW,2940000
+"Ian Cole
+",CAR,D,2900000
+"Jake Allen
+",MTL,G,2875000
+"Colton Sissons
+",NSH,C,2857412
+"Jordan Kyrou
+",STL,C,2800000
+"Robert Thomas
+",STL,C,2800000
+"MacKenzie Blackwood
+",NJD,G,2800000
+"Joonas Korpisalo
+",CBJ,G,2800000
+"Vladislav Gavrikov
+",CBJ,D,2800000
+"Carson Soucy
+",SEA,D,2750000
+"Oskar Sundqvist
+",DET,C,2750000
+"Chandler Stephenson
+",VGK,C,2750000
+"Carl Hagelin
+",WAS,LW,2750000
+"Warren Foegele
+",EDM,LW,2750000
+"Miles Wood
+",NJD,LW,2750000
+"Jesper Bratt
+",NJD,LW,2750000
+"Brock McGinn
+",PIT,LW,2750000
+"Markus Nutivaara
+",FLA,D,2700000
+"Andreas Athanasiou
+",LAK,C,2700000
+"Gustav Forsling
+",FLA,D,2666667
+"Sean Walker
+",LAK,D,2650000
+"Jason Dickinson
+",VAN,C,2650000
+"Denis Gurianov
+",DAL,RW,2550000
+"Frank Vatrano
+",NYR,LW,2533333
+"Patrik Nemeth
+",NYR,D,2500000
+"Nicholas Ritchie
+",ARI,LW,2500000
+"Brayden McNabb
+",VGK,D,2500000
+"Artem Zub
+",OTT,D,2500000
+"Michal Kempny
+",WAS,D,2500000
+"Nick Jensen
+",WAS,D,2500000
+"Radko Gudas
+",FLA,D,2500000
+"Valeri Nichushkin
+",COL,RW,2500000
+"Henri Jokiharju
+",BUF,D,2500000
+"Casey Mittelstadt
+",BUF,C,2500000
+"Sean Kuraly
+",CBJ,C,2500000
+"Casey Cizikas
+",NYI,C,2500000
+"Tucker Poolman
+",VAN,D,2500000
+"Alexander Georgiev
+",NYR,G,2425000
+"Andrew Mangiapane
+",CGY,LW,2425000
+"Dante Fabbro
+",NSH,D,2400000
+"Erik Haula
+",BOS,C,2375000
+"Jake Bean
+",CBJ,D,2333333
+"Laurent Brossoit
+",VGK,G,2325000
+"Filip Chytil
+",NYR,LW,2300000
+"Luke Kunin
+",NSH,C,2300000
+"Artturi Lehkonen
+",COL,LW,2300000
+"Dillon Dube
+",CGY,C,2300000
+"Dmitry Kulikov
+",MIN,D,2250000
+"Ivan Barbashev
+",STL,C,2250000
+"Cody Eakin
+",BUF,C,2250000
+"Pavel Zacha
+",NJD,C,2250000
+"Radim Simek
+",SJS,D,2250000
+"James Reimer
+",SJS,G,2250000
+"Mike Smith
+",EDM,G,2200000
+"Zemgus Girgensons
+",BUF,C,2200000
+"Theodor Blueger
+",PIT,C,2200000
+"Adin Hill
+",SJS,G,2175000
+"Evander Kane
+",EDM,LW,2108696
+"Jordan Greenway
+",MIN,LW,2100000
+"Adam Erne
+",DET,LW,2100000
+"Nick Bonino
+",SJS,C,2050000
+"Maxime Comtois
+",ANA,LW,2037500
+"Tyson Jost
+",MIN,C,2000000
+"Ethan Bear
+",CAR,D,2000000
+"Marc Staal
+",DET,D,2000000
+"Mattias Janmark
+",VGK,C,2000000
+"Jesper Fast
+",CAR,RW,2000000
+"Antti Raanta
+",CAR,G,2000000
+Michael Del,"Zotto
+ OTT",D,2000000
+"Ilya Samsonov
+",WAS,G,2000000
+"Mark Borowiecki
+",NSH,D,2000000
+"Martin Jones
+",PHI,G,2000000
+"Zach Sanford
+",WPG,LW,2000000
+"Ryan Murray
+",COL,D,2000000
+"Pavel Francouz
+",COL,G,2000000
+"Yegor Sharangovich
+",NJD,C,2000000
+"Justin Holl
+",TOR,D,2000000
+"Adrian Kempe
+",LAK,LW,2000000
+"Vladislav Namestnikov
+",DAL,C,2000000
+"Braden Holtby
+",DAL,G,2000000
+"Calle Jarnkrok
+",CGY,C,2000000
+"Erik Gudbranson
+",CGY,D,1950000
+"Trevor Moore
+",LAK,LW,1875000
+"Brett Kulak
+",EDM,D,1850000
+"Jack Roslovic
+",CBJ,C,1838362
+"Janne Kuokkanen
+",NJD,C,1825000
+"Justin Braun
+",NYR,D,1800000
+"Jordan Martinook
+",CAR,LW,1800000
+"Tomas Nosek
+",BOS,LW,1750000
+"Ryan Reaves
+",NYR,RW,1750000
+"Tyler Pitlick
+",MTL,RW,1750000
+"Zach Aston-Reese
+",ANA,C,1725000
+"Ryan Hartman
+",MIN,RW,1700000
+"Sonny Milano
+",ANA,LW,1700000
+"Nick Holden
+",OTT,D,1700000
+"Troy Stecher
+",LAK,D,1700000
+"Nick Blankenburg
+",CBJ,D,1688452
+"Noel Acciari
+",FLA,C,1666666
+"Kyle Turris
+",EDM,C,1650000
+"Jack Campbell
+",TOR,G,1650000
+"Dean Kukan
+",CBJ,D,1650000
+"Ilya Mikheyev
+",TOR,LW,1645000
+"Robert Hagg
+",FLA,D,1600000
+"Anders Bjork
+",BUF,LW,1600000
+"Brendan Lemieux
+",LAK,LW,1550000
+"Rudolfs Balcers
+",SJS,LW,1550000
+"Lawson Crouse
+",ARI,LW,1533333
+"Alexandre Texier
+",CBJ,C,1525000
+"Samuel Blais
+",NYR,LW,1500000
+"Derek Grant
+",ANA,LW,1500000
+"Austin Watson
+",OTT,LW,1500000
+"Garnet Hathaway
+",WAS,RW,1500000
+"Marcus Johansson
+",WAS,C,1500000
+"Conor Sheary
+",WAS,LW,1500000
+"Josh Archibald
+",EDM,RW,1500000
+"Nick Cousins
+",NSH,C,1500000
+"Brandon Hagel
+",TBL,LW,1500000
+"David Kampf
+",TOR,C,1500000
+"Matt Martin
+",NYI,LW,1500000
+"Jaroslav Halak
+",VAN,G,1500000
+"Luke Glendening
+",DAL,C,1500000
+"Travis Dermott
+",VAN,D,1500000
+"Andrej Sekera
+",DAL,D,1500000
+"Jani Hakanpaa
+",DAL,D,1500000
+"Michael Rasmussen
+",DET,C,1460000
+"Troy Terry
+",ANA,RW,1450000
+"Eeli Tolvanen
+",NSH,RW,1450000
+"Scott Mayfield
+",NYI,D,1450000
+"William Carrier
+",VGK,LW,1400000
+"Johan Larsson
+",WAS,LW,1400000
+"Tage Thompson
+",BUF,C,1400000
+"Robert Bortuzzo
+",STL,D,1375000
+"Chris Wagner
+",BOS,C,1350000
+"Jordan Oesterle
+",DET,D,1350000
+"Derek Stepan
+",CAR,C,1350000
+"Riley Stillman
+",CHI,D,1350000
+"Nicholas Paul
+",TBL,C,1350000
+"Ilya Lyubushkin
+",TOR,D,1350000
+"Haydn Fleury
+",SEA,D,1300000
+"Jan Rutta
+",TBL,D,1300000
+"Max Jones
+",ANA,LW,1295000
+"Kris Russell
+",EDM,D,1250000
+"Derek Ryan
+",EDM,C,1250000
+"David Rittich
+",NSH,G,1250000
+"Casey DeSmith
+",PIT,G,1250000
+"Nathan Beaulieu
+",PIT,D,1250000
+"Pierre Engvall
+",TOR,LW,1250000
+"Ondrej Kase
+",TOR,RW,1250000
+"Tyler Motte
+",NYR,C,1225000
+"Frederick Gaudreau
+",MIN,C,1200000
+"Joshua Brown
+",BOS,D,1200000
+"Nolan Patrick
+",VGK,C,1200000
+"Victor Mete
+",OTT,D,1200000
+"Jesse Puljujarvi
+",EDM,RW,1175000
+"Kailer Yamamoto
+",EDM,C,1175000
+"Ross Colton
+",TBL,C,1125000
+"Jonas Siegenthaler
+",NJD,D,1125000
+"Brandon Sutter
+",VAN,C,1125000
+"Dylan Gambrell
+",OTT,C,1100000
+"Danton Heinen
+",PIT,C,1100000
+"Michael Raffl
+",DAL,LW,1100000
+"Nicolas Aube-Kubel
+",COL,RW,1075000
+"Joel Kiviranta
+",DAL,LW,1050000
+"Trent Frederic
+",BOS,C,1050000
+"Vincent Hinostroza
+",BUF,C,1050000
+"Ryan Carpenter
+",CGY,C,1000000
+"Nicolas Deslauriers
+",MIN,LW,1000000
+"Connor Clifton
+",BOS,D,1000000
+"Kodie Curran
+",BOS,D,1000000
+"Christian Fischer
+",ARI,C,1000000
+"Anthony DeAngelo
+",CAR,D,1000000
+"Henrik Borgstrom
+",CHI,C,1000000
+"Matthew Benning
+",NSH,D,1000000
+"Corey Perry
+",TBL,RW,1000000
+"Pierre-Edouard Bellemare
+",TBL,LW,1000000
+"Andrew Cogliano
+",COL,LW,1000000
+"Carter Verhaeghe
+",FLA,C,1000000
+"Darren Helm
+",COL,C,1000000
+"Evan Rodrigues
+",PIT,LW,1000000
+"Kyle Clifford
+",TOR,C,1000000
+"Ross Johnston
+",NYI,LW,1000000
+"Alexander Barabanov
+",SJS,RW,1000000
+"Adam Gaudette
+",OTT,C,997500
+"Jujhar Khaira
+",CHI,LW,975000
+"Maxim Mamin
+",FLA,C,975000
+"Michael Mcleod
+",NJD,C,975000
+"Eric Robinson
+",CBJ,LW,975000
+"Anthony Stolarz
+",ANA,G,950000
+"Mathieu Perreault
+",MTL,C,950000
+Trevor Van,"Riemsdyk
+ WAS",D,950000
+"Michael Bunting
+",TOR,LW,950000
+"Jake Oettinger
+",DAL,G,925000
+"Adam Fox
+",NYR,D,925000
+"Kaapo Kakko
+",NYR,RW,925000
+"Alexis Lafrenière
+",NYR,LW,925000
+"K'Andre Miller
+",NYR,D,925000
+"Braden Schneider
+",NYR,D,925000
+"Jack Ahcan
+",BOS,D,925000
+"Jeremy Swayman
+",BOS,G,925000
+"Lucas Raymond
+",DET,RW,925000
+"Jamie Drysdale
+",ANA,D,925000
+"Justin Barron
+",MTL,D,925000
+"Trevor Zegras
+",ANA,C,925000
+"Josh Norris
+",OTT,C,925000
+"Shane Pinto
+",OTT,C,925000
+"Jake Sanderson
+",OTT,D,925000
+"Tim Stützle
+",OTT,C,925000
+"Scott Perunovich
+",STL,D,925000
+"Kirby Dach
+",CHI,C,925000
+"Bobby Brink
+",PHI,RW,925000
+"Joel Farabee
+",PHI,LW,925000
+"Morgan Barron
+",WPG,C,925000
+"Dylan Samberg
+",WPG,D,925000
+"Aleksi Heponiemi
+",FLA,C,925000
+"Spencer Knight
+",FLA,G,925000
+"Anton Lundell
+",FLA,C,925000
+"Jesper Boqvist
+",NJD,C,925000
+"Alexander Holtz
+",NJD,RW,925000
+"Jack Hughes
+",NJD,C,925000
+"Reilly Walsh
+",NJD,D,925000
+"Mattias Samuelsson
+",BUF,D,925000
+"Michael Anderson
+",LAK,D,925000
+"Emil Bemstrom
+",CBJ,C,925000
+"Yegor Chinakhov
+",CBJ,RW,925000
+"Kent Johnson
+",CBJ,C,925000
+"Cole Sillinger
+",CBJ,C,925000
+"Daniil Tarasov
+",CBJ,G,925000
+"Mario Ferraro
+",SJS,D,925000
+"John Leonard
+",SJS,C,925000
+"Vasily Podkolzin
+",VAN,RW,925000
+"Rem Pitlick
+",MTL,C,917831
+"Alex Vlasic
+",CHI,D,916667
+"Owen Power
+",BUF,D,916667
+"Thomas Bordeleau
+",SJS,C,916667
+"Connor Mackey
+",CGY,D,912500
+"Ben Meyers
+",COL,LW,912500
+"Alex Newhook
+",COL,C,908333
+"Brett Ritchie
+",CGY,RW,900000
+"Jordie Benn
+",MIN,D,900000
+"Nick Bjugstad
+",MIN,C,900000
+"William Borgen
+",SEA,D,900000
+"Tyler Ennis
+",OTT,C,900000
+"Anton Forsberg
+",OTT,G,900000
+"MacKenzie MacEachern
+",STL,LW,900000
+"Keith Yandle
+",PHI,D,900000
+"Patrick Maroon
+",TBL,LW,900000
+"Brian Elliott
+",TBL,G,900000
+"Mason Appleton
+",WPG,C,900000
+"Logan Stanley
+",WPG,D,900000
+"Mark Pysyk
+",BUF,D,900000
+"Wayne Simmonds
+",TOR,RW,900000
+"Matthew Beniers
+",SEA,C,897500
+"Eetu Luostarinen
+",FLA,C,897500
+"Joe Veleno
+",DET,C,894167
+"Seth Jarvis
+",CAR,RW,894167
+"Filip Zadina
+",DET,RW,894167
+"Barrett Hayton
+",ARI,C,894167
+"Alexander Romanov
+",MTL,D,894167
+"Urho Vaakanainen
+",ANA,D,894167
+"Cole Perfetti
+",WPG,C,894167
+"Bowen Byram
+",COL,D,894167
+"Dawson Mercer
+",NJD,RW,894167
+"Dylan Cozens
+",BUF,C,894167
+"Rasmus Sandin
+",TOR,D,894167
+"Tobias Bjornfot
+",LAK,D,894167
+"Quinton Byfield
+",LAK,C,894167
+"Arthur Kaliyev
+",LAK,RW,894167
+"Gabe Vilardi
+",LAK,C,894167
+"Adam Boqvist
+",CBJ,D,894167
+"Oliver Wahlstrom
+",NYI,RW,894167
+"Noah Dobson
+",NYI,D,894167
+"Nils Hoglander
+",VAN,LW,891667
+"Jacob Bryson
+",BUF,D,889166
+"Janis Moser
+",ARI,D,886667
+"Brett Howden
+",VGK,C,885000
+"Marc McLaughlin
+",BOS,C,883750
+"Jack McBain
+",ARI,C,883750
+"Nathan Smith
+",ARI,C,883750
+"Matthew Boldy
+",MIN,LW,880833
+"Cole Caufield
+",MTL,RW,880833
+"Cameron York
+",PHI,D,880833
+"Justus Annunen
+",COL,G,880833
+"Kurtis Macdermid
+",COL,D,875000
+"Libor Hajek
+",NYR,D,874125
+"Kole Lind
+",SEA,RW,874125
+"Isac Lundestrom
+",ANA,C,874125
+"Sam Steel
+",ANA,C,874125
+"Lias Andersson
+",LAK,C,874125
+"Thomas Harley
+",DAL,D,863333
+"Moritz Seider
+",DET,D,863333
+"Martin Necas
+",CAR,C,863333
+"Nick Suzuki
+",MTL,C,863333
+"Victor Soderstrom
+",ARI,D,863333
+"Erik Brannstrom
+",OTT,D,863333
+"Connor McMichael
+",WAS,C,863333
+"Evan Bouchard
+",EDM,D,863333
+"Philip Tomasino
+",NSH,C,863333
+"Morgan Frost
+",PHI,C,863333
+"Owen Tippett
+",PHI,RW,863333
+"Nolan Foote
+",NJD,LW,863333
+"Ty Smith
+",NJD,D,863333
+"Peyton Krebs
+",BUF,C,863333
+"Timothy Liljegren
+",TOR,D,863333
+"Rasmus Kupari
+",LAK,C,863333
+"Ryan Merkley
+",SJS,D,863333
+"Matt Kiersted
+",FLA,D,858750
+"Cal Petersen
+",LAK,G,858333
+"Cole Schwindt
+",FLA,RW,855833
+"Santeri Hatakka
+",SJS,D,850833
+"Luke Schenn
+",VAN,D,850000
+"Jon Merrill
+",MIN,D,850000
+"Riley Sheahan
+",SEA,LW,850000
+"Sam Gagner
+",DET,C,850000
+"Gustav Lindstrom
+",DET,D,850000
+"Conor Timmins
+",ARI,D,850000
+"Devin Shore
+",EDM,C,850000
+"Caleb Jones
+",CHI,D,850000
+"Jeremy Lauzon
+",NSH,D,850000
+"Zach Bogosian
+",TBL,D,850000
+"Cal Foote
+",TBL,D,850000
+"Malcolm Subban
+",BUF,G,850000
+"Nicholas Abruzzese
+",TOR,C,850000
+"Matt Nieto
+",SJS,LW,850000
+"William Lockwood
+",VAN,RW,842500
+"Jacob Peterson
+",DAL,C,842500
+"Jesper Froden
+",BOS,RW,842500
+"Pyotr Kochetkov
+",CAR,G,842500
+"Jordan Harris
+",MTL,D,842500
+"Karel Vejmelka
+",ARI,G,842500
+"Philipp Kurashev
+",CHI,C,842500
+"Robin Salo
+",NYI,D,842500
+"Scott Reedy
+",SJS,C,842500
+"Jasper Weatherby
+",SJS,C,842500
+"Angus Crookshank
+",OTT,LW,838333
+"Jack Matier
+",NSH,D,838333
+"Kevin Mandolese
+",OTT,G,835000
+"Ryan McLeod
+",EDM,C,834167
+"Viktor Lodin
+",OTT,C,830000
+"Connor Dewar
+",MIN,C,825833
+"Scott Wedgewood
+",DAL,G,825000
+"Carter Rowney
+",DET,C,825000
+"Derick Brassard
+",EDM,C,825000
+"Kevin Connauton
+",PHI,D,825000
+"Zack MacEwen
+",PHI,C,825000
+"Nathan Bastian
+",NJD,RW,825000
+"Rasmus Asplund
+",BUF,C,825000
+"Mark Kastelic
+",OTT,C,821667
+"Carson Meyer
+",CBJ,RW,820000
+"Jordan Spence
+",LAK,D,820000
+"Linus Hogberg
+",PHI,D,815000
+"Mackenzie Entwistle
+",CHI,RW,811667
+"Oskar Steen
+",BOS,C,809167
+"Fabian Zetterlund
+",NJD,LW,809167
+"Simon Benoit
+",ANA,D,809166
+"Sean Durzi
+",LAK,D,809166
+"Adam Ruzicka
+",CGY,C,801666
+"Brad Hunt
+",VAN,D,800000
+"Spencer Martin
+",VAN,G,800000
+"Brad Richardson
+",VAN,RW,800000
+"Ty Lewis
+",CGY,LW,800000
+"Trevor Lewis
+",CGY,C,800000
+"Curtis Lazar
+",BOS,C,800000
+"Logan Thompson
+",VGK,G,800000
+"Magnus Hellberg
+",DET,G,800000
+"Brendan Smith
+",CAR,D,800000
+"Calvin Pickard
+",DET,G,800000
+"Kevin Lankinen
+",CHI,G,800000
+"Gerald Mayhew
+",ANA,C,800000
+"Erik Gustafsson
+",CHI,D,800000
+"Ben Harpur
+",NSH,D,800000
+"Tanner Jeannot
+",NSH,LW,800000
+"Nate Thompson
+",PHI,C,800000
+"Mason Marchment
+",FLA,LW,800000
+"Jimmy Vesey
+",NJD,LW,800000
+"Blake Lizotte
+",LAK,C,800000
+"Nikolai Knyzhov
+",SJS,D,796667
+"Fredrik Karlstrom
+",DAL,C,795000
+"Jason Robertson
+",DAL,LW,795000
+"Kevin Bahl
+",NJD,D,795000
+"Nicolas Hague
+",VGK,D,791667
+"Martin Fehervary
+",WAS,D,791667
+"Vladislav Kolyachonok
+",ARI,D,789167
+"Nikita Okhotyuk
+",NJD,D,789167
+"Niko Mikkola
+",STL,D,787500
+"Andrew Peeke
+",CBJ,D,787500
+"Arturs Silovs
+",VAN,G,786111
+"Jonah Gadjovich
+",SJS,LW,783333
+"Alexander Chmelevski
+",SJS,C,778333
+"Julien Gauthier
+",NYR,RW,775000
+"Alexei Toropchenko
+",STL,RW,775000
+"Kyle Capobianco
+",ARI,D,775000
+"Tyler Parsons
+",CGY,G,771750
+"Austin Strand
+",LAK,D,771750
+"Jack Studnicka
+",BOS,C,769167
+"Brady Keeper
+",VAN,D,762500
+"Dryden Hunt
+",NYR,LW,762500
+"Dylan Coghlan
+",VGK,D,762500
+"Kale Clague
+",MTL,D,761250
+"Boris Katchouk
+",CHI,LW,758333
+"Taylor Raddysh
+",CHI,RW,758333
+"Yegor Zamula
+",PHI,D,756667
+"Jonathan Dahlen
+",SJS,C,750000
+"Noah Gregor
+",SJS,C,750000
+"Jaycob Megna
+",SJS,D,750000
+"Nicholas Meloche
+",SJS,D,750000
+"Lane Pederson
+",SJS,C,750000
+"Jeffrey Truchon-Viel
+",SJS,LW,750000
+"Kyle Burroughs
+",VAN,D,750000
+"Alex Chiasson
+",VAN,RW,750000
+"Sheldon Dries
+",VAN,C,750000
+"Juho Lammikko
+",VAN,RW,750000
+"Nicolas Petan
+",VAN,C,750000
+"Oliver Kylington
+",CGY,D,750000
+"Joel Hanley
+",DAL,D,750000
+"Michael Stone
+",CGY,D,750000
+"Daniel Vladar
+",CGY,G,750000
+"Brandon Duhaime
+",MIN,RW,750000
+"Marian Studenic
+",DAL,RW,750000
+"Kevin Rooney
+",NYR,C,750000
+"Jonny Brodzinski
+",NYR,C,750000
+"Greg McKegg
+",NYR,C,750000
+"Ryan Donato
+",SEA,C,750000
+"Morgan Geekie
+",SEA,C,750000
+"Derrick Pouliot
+",SEA,D,750000
+"Michael Amadio
+",VGK,C,750000
+"Anton Blidh
+",BOS,LW,750000
+"Kyle Criscuolo
+",DET,C,750000
+"Turner Elson
+",DET,LW,750000
+"Ben Hutton
+",VGK,D,750000
+"Olli Juolevi
+",DET,D,750000
+"Nicolas Roy
+",VGK,C,750000
+"Givani Smith
+",DET,RW,750000
+"Jake Evans
+",MTL,C,750000
+"Laurent Dauphin
+",MTL,C,750000
+"Samuel Montembeault
+",MTL,G,750000
+"Michael Pezzetta
+",MTL,C,750000
+"Ryan Poehling
+",MTL,C,750000
+"Chris Wideman
+",MTL,D,750000
+"Tyler Bozak
+",STL,C,750000
+"Logan Brown
+",STL,C,750000
+"Ville Husso
+",STL,G,750000
+"Calle Rosen
+",STL,D,750000
+"Nathan Walker
+",STL,LW,750000
+"Nic Dowd
+",WAS,C,750000
+"Matt Irwin
+",WAS,D,750000
+"Axel Jonsson-Fjallby
+",WAS,LW,750000
+"Joe Snively
+",WAS,LW,750000
+"Sam Lafferty
+",CHI,C,750000
+"Travis Boyd
+",ARI,LW,750000
+"Michael Carcone
+",ARI,RW,750000
+"Cam Dineen
+",ARI,D,750000
+"Jeremy Davies
+",NSH,D,750000
+"Matt Luff
+",NSH,RW,750000
+"Michael McCarron
+",NSH,RW,750000
+"Mathieu Olivier
+",NSH,RW,750000
+"Alex Galchenyuk
+",ARI,C,750000
+"Bokondji Imama
+",ARI,LW,750000
+"Sam Carrick
+",ANA,C,750000
+"Patrick Brown
+",PHI,LW,750000
+"Trevor Carrick
+",ANA,D,750000
+"Samuel Morin
+",PHI,D,750000
+"Vinni Lettieri
+",ANA,C,750000
+"Dysin Mayo
+",ARI,D,750000
+"Felix Sandstrom
+",PHI,G,750000
+"Nick Seeler
+",PHI,D,750000
+"Joshua Mahura
+",ANA,D,750000
+"Liam O'Brien
+",ARI,C,750000
+"Eric Comrie
+",WPG,G,750000
+"Harri Sateri
+",ARI,G,750000
+"Evgeny Svechnikov
+",WPG,LW,750000
+"Dominic Toninato
+",WPG,C,750000
+"Lucas Carlsson
+",FLA,D,750000
+"Jack Johnson
+",COL,D,750000
+"Jonas Johansson
+",FLA,G,750000
+"Joe Thornton
+",FLA,C,750000
+"Dominik Simon
+",ANA,C,750000
+"Andrej Sustr
+",ANA,D,750000
+"Jon Gillies
+",NJD,G,750000
+"Andrew Hammond
+",NJD,G,750000
+"Colton White
+",NJD,D,750000
+"Brian Boyle
+",PIT,C,750000
+"Louis Domingue
+",PIT,G,750000
+"Chad Ruhwedel
+",PIT,D,750000
+"Joseph Anderson
+",TOR,RW,750000
+"Andrew Oglevie
+",BUF,C,750000
+"Craig Anderson
+",BUF,G,750000
+"Drake Caggiula
+",BUF,C,750000
+"Erik Källgren
+",TOR,G,750000
+"Jason Spezza
+",TOR,C,750000
+"John Hayden
+",BUF,C,750000
+"Michael Houser
+",BUF,G,750000
+"Nathan Gerbe
+",CBJ,LW,750000
+"Gavin Bayreuther
+",CBJ,D,750000
+"Justin Danforth
+",CBJ,RW,750000
+"Brendan Gaunce
+",CBJ,C,750000
+"Jacob Moverare
+",LAK,D,750000
+"Kieffer Bellows
+",NYI,LW,750000
+"Zdeno Chara
+",NYI,D,750000
+"Andy Greene
+",NYI,D,750000
+"Otto Koivula
+",NYI,LW,750000
+"Zach Parise
+",NYI,LW,750000
+"Alex Formenton
+",OTT,LW,747500
+"Mitchell Stephens
+",DET,C,737500
+"Mathieu Joseph
+",OTT,RW,737500
+"Alex Carrier
+",NSH,D,733333
+"Connor Ingram
+",NSH,G,733333
+"Parker Kelly
+",OTT,C,726667
+"Kaapo Kahkonen
+",SJS,G,725000
+"Madison Bowey
+",VAN,D,725000
+"Matthew Highmore
+",VAN,C,725000
+"Jacob Middleton
+",MIN,D,725000
+"Karson Kuhlman
+",SEA,RW,725000
+"Daniel Sprong
+",SEA,RW,725000
+"Keegan Kolesar
+",VGK,RW,725000
+"Zach Whitecloud
+",VGK,D,725000
+"Jake Walman
+",DET,D,725000
+"Steven Lorentz
+",CAR,C,725000
+"William Lagesson
+",MTL,D,725000
+"Jakub Zboril
+",BOS,D,725000
+"Yakov Trenin
+",NSH,C,725000
+"Adam Brooks
+",WPG,C,725000
+"Jansen Harkins
+",WPG,C,725000
+"Jacob MacDonald
+",COL,D,725000
+"Ryan Lomberg
+",FLA,LW,725000
+"Logan O'Connor
+",COL,C,725000
+"Nico Sturm
+",COL,C,725000
+"Mason Geertsen
+",NJD,D,725000
+"Mark Friedman
+",PIT,D,725000
+"Colin Blackwell
+",TOR,C,725000
+"Dustin Tokarski
+",BUF,G,725000
+"Gabriel Carlsson
+",CBJ,D,725000
+"Carl Grundstrom
+",LAK,RW,725000
+"Sebastian Aho
+",NYI,D,725000
+"Jake Bischoff
+",VGK,D,716667
+"Vitek Vanecek
+",WAS,G,716667

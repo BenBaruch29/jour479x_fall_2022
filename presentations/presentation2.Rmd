@@ -3,18 +3,23 @@ title: "Second Presentation"
 output: html_document
 date: "2022-11-20"
 ---
+*****NOTE: SINCE I SPENT EXTENSIVE TIME LOADING AND FIXING THE DATA, THE ACTUAL STORY FOR THIS ASSIGNMENT STARTS IN SECTION 3 (LINE 93)
+SECTION 1: LIBRARIES AND LOADING THE DATA
 
 ```{r}
 library(tidyverse)
 library(dplyr)
+library(ggplot2)
+library(ggbeeswarm)
+library(ggrepel)
 ```
 
 ```{r}
-skaters22 <- read_csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/skaters 22-23.csv")
+skaters22 <- read_csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/skaters (1).csv")
 skaters21 <- read_csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/skaters 21-22.csv")
 skaters20 <- read_csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/skaters 20-21.csv")
 salaries21 <- read_csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/22-23 NHL Salaries - Sheet1.csv")
-salaries22 <- read_csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/21-22 NHL Salaries - Sheet1.csv")
+salaries22 <- read_csv("C:/Users/benba/OneDrive/Documents/GitHub/jour479x_fall_2022/data/22-23 NHL Salaries Updated - Sheet1.csv")
 ```
 The first thing I noticed after I loaded the data is that each player is listed multiple times. Each represents a different scenario of play (5v5, special teams, etc.). For the sake of simplicity, I'll narrow it down to all situations using filter. 
 
@@ -23,6 +28,8 @@ all_skaters20 <- skaters20 %>% filter(situation == "all")
 all_skaters21 <- skaters21 %>% filter(situation == "all")
 all_skaters22 <- skaters22 %>% filter(situation == "all")
 ```
+
+SECTION 2: FIXING ISSUES
 
 The next problem I find is in salaries 22. This data was arranged by salary, but I want to arrange by cap hit. The reason I'm doing this is because cap hit matters more in determining a player's worth to a team. There's a whole bunch of tricks teams could use to fenagle the salary cap. For example, Connor McDavid's "salary" is $1,000,000. HoIver, other contract bonuses give him a $12.5 million annual cap hit. So I'm going to oragnize this salaries22 by descending cap hit.
 
@@ -59,10 +66,248 @@ salaries21 <- salaries21[c("Player", "Tm", "Position", "Cap_Hit")]
 
 I'm not so concerned with the position in salaries21 right now because I might not use it anyway. The important thing is now I have clean data from last season and this NHL season. I imported 2020-21 just in case, but that was a funky year anyway (COVID re-alignment) so it might be best to leave it out. 
 
+Right now, my biggest question (and next step in this process) is figuring out how to discern which players were worth their contract based on cap hit and game score. Then I group bad players into their respective teams and compile rankings. I'm still having trouble joining each year's salary and player data into two dataframes. I'll need these to start my analysis and see game scores and salary data side by side. Any help on this would be appreciated, as well as any ideas on defining a "bad contract," perhaps a cutoff where game score and salary become mismatched.
+
 ```{r}
 colnames(all_skaters21)[3] = "Player"
 colnames(all_skaters22)[3] = "Player"
-joined21 = all_skaters21 %>% inner_join(salaries21, by="Player")
+different_names22 <- salaries22 %>% anti_join(all_skaters22, by=c("Player"))
+joined22 = all_skaters22 %>% inner_join(salaries22, by="Player") %>% arrange(desc(gameScore)) %>% summarize(playerId, season, Player, games_played, Cap_Hit, team, position, situation, gameScore)
 ```
 
-Right now, my biggest question (and next step in this process) is figuring out how to discern which players were worth their contract based on cap hit and game score. Then I group bad players into their respective teams and compile rankings. I'm still having trouble joining each year's salary and player data into two dataframes. I'll need these to start my analysis and see game scores and salary data side by side. Any help on this would be appreciated, as well as any ideas on defining a "bad contract," perhaps a cutoff where game score and salary become mismatched.
+I realized that goalies were not included on the all_skaters dataframe. Additionally, some names had different spellings and that players that haven't played this season were not included in the document. The join resulted in 635 rows. The code was executed successfully for 22-23, and now we'll repeat the process with 21-22. 
+
+```{r}
+fixing_salaries21 <- salaries21 %>% write.csv("C://Users//benba//OneDrive//Documents//GitHub//jour479x_fall_2022/data//fixingsalaries21.csv")
+salaries21$Player <- gsub("\n", "", salaries21$Player)
+joined21 = all_skaters21 %>% inner_join(salaries21, by="Player") %>% arrange(desc(gameScore)) %>% summarize(playerId, season, games_played, Player, Cap_Hit, team, position, situation, gameScore)
+different_names21 <- salaries21 %>% anti_join(all_skaters21, by=c("Player"))
+
+joined21 <- joined21[-c(32,561),]
+joined21
+
+joined22 <- joined22[-c(29,358),]
+joined22
+```
+
+SECTION 3: ANALYSIS AND THE STORY
+
+The 16 teams that missed last season's NHL playoffs tended to have more players on worse contracts than those that made them. 
+
+That's a loaded statement, though. In order to understand it, and why it was the case, we need to define a good/bad player and a good/bad contract. 
+
+Now that we have clean data for the past season and a chunk of hockey, we can plot every player from the last two (this and last) NHL seasons. We'll compare their salary cap hits* to their "game scores," a metric developed by Dom Luszczyszyn of the Athletic. The statistic assigns a specific weight to certain statistical categories based on importance. The higher a gameScore, the better a player performed. The stats below are an aggregate from all of last season and this season up to this point. 
+
+*Cap hit is used here instead of salary since cap hit affects a team's ability to sign and trade for players much more than a player's salary under the NHL's CBA. 
+
+```{r}
+ggplot() + 
+  geom_point(data=joined21, aes(x=Cap_Hit, y=gameScore)) +
+  geom_smooth(data=joined21, aes(x=Cap_Hit, y=gameScore), method="lm")
+
+ggplot() + 
+  geom_point(data=joined22, aes(x=Cap_Hit, y=gameScore)) +
+  geom_smooth(data=joined22, aes(x=Cap_Hit, y=gameScore), method="lm")
+```
+We can now define what good and bad means in the context of this analysis. If you're below that blue line, you're playing below your pay grade, and vise versa.
+
+Immediately, the amount of players making less than $2.5 million jumps out. This is likely the dilemma of the entry level contract. This severely limits the cap hit of some of the league's best rookies and young players. However, it would be foolish to filter these players out, since drafting well and bringing them into the league is a good strategy to optimize cap space. Some of the best teams have done that to win the Stanley Cup. 
+
+What I want to hone in on are the dots in the lower right quadrant of the graph. Those are players signed to expensive contracts, but aren't producing as they should. 
+
+That's where the blue line should come in handy. However, it's skewed by those entry level contracts. Some of those players aren't even regulars on their respective rosters.
+
+```{r}
+joined21_limited <- joined21 %>% filter(games_played > 20)
+joined22_limited <- joined22 %>% filter(games_played > 5)
+
+ggplot() + 
+  geom_point(data=joined21_limited, aes(x=Cap_Hit, y=gameScore)) +
+  geom_smooth(data=joined21, aes(x=Cap_Hit, y=gameScore), method="lm")
+
+ggplot() + 
+  geom_point(data=joined22_limited, aes(x=Cap_Hit, y=gameScore)) +
+  geom_smooth(data=joined22_limited, aes(x=Cap_Hit, y=gameScore), method="lm")
+
+fit21 <- lm(gameScore ~ Cap_Hit, data = joined21_limited)
+summary(fit21)
+
+fit22 <- lm(gameScore ~ Cap_Hit, data = joined22_limited)
+summary(fit22)
+```
+Now that we filtered out the benchwarmers. We need to find out which teams each of these players on and how they finished their seasons. 
+
+As I assumed, especially on the more expensive contracts, players who played below their pay grade tended to miss the playoffs. 
+
+```{r}
+joined21_limited_DNQ <- joined21_limited %>% filter(team == "BUF" | team == "DET" | team == "OTT" | team == "MTL" | team == "NYI" | team == "CBJ" | team == "NJD" | team == "PHI" | team == "WPG" | team == "CHI" | team == "ARI" | team == "VGK" | team == "VAN" | team == "SJS" | team == "ANA" | team == "SEA") 
+
+joined21_limited_R1 <- joined21_limited %>% filter(team == "WSH" | team == "TOR" | team == "BOS" | team == "PIT" | team == "NSH" | team == "MIN" | team == "DAL" | team == "LAK")
+
+joined21_limited_R2 <- joined21_limited %>% filter(team == "FLA" | team == "CAR" | team == "STL" | team == "CGY")
+
+joined21_limited_F4 <- joined21_limited %>% filter(team == "COL" | team == "TBL" | team == "NYR" | team == "EDM")
+
+ggplot() + 
+  geom_point(data=joined21_limited, aes(x=Cap_Hit, y=gameScore)) +
+  geom_smooth(data=joined21_limited, aes(x=Cap_Hit, y=gameScore), method="lm") +
+  geom_point(data=joined21_limited_DNQ, aes(x=Cap_Hit, y=gameScore), color = "red") +
+  geom_point(data=joined21_limited_R1, aes(x=Cap_Hit, y=gameScore), color = "orange") + 
+  geom_point(data=joined21_limited_R2, aes(x=Cap_Hit, y=gameScore), color = "blue") +
+  geom_point(data=joined21_limited_F4, aes(x=Cap_Hit, y=gameScore), color = "green") +
+  labs(title="The Line Between Good an Bad Contracts 21-22", subtitle="Players above the line are playing above thier pay grade, and vise versa", caption="Source: MoneyPuck | By Ben Baruch")  + theme_minimal() + 
+  theme(
+    plot.title = element_text(size = 16, face = "bold"),
+    axis.title = element_text(size = 10), 
+    plot.subtitle = element_text(size=12), 
+    panel.grid.minor = element_blank()
+    )
+```
+The lower right quadrant of this graph is almost exclusively red and orange dots. The farthest to the right is Erik Karlsson. Once a Norris Trophy defenseman, he had a season to forget in San Jose last year. Nagging injuries appeared to derail his career and he seemed destined to waste away on a bottom-feeding Sharks team. Some other players who were in that infamous quadrant were Jonathan Toews, Jack Eichel, Mark Stone, Drew Doughty and Tyler Seguin. All of these players suffered serious injury last season, and that affected their team's performance. 
+Stone and Eichel are a great example. Both are normally some of the best players in the NHL. As such, they make $9.5 and $10 million respectively each season. When they got hurt, the team didn't have the depth to replace them, since those two players take up about 23% of Vegas' salary cap. The team even traded away Max Pacioretty (who makes $7 million annually) for literally nothing in the offseason to make room for all their expensive contracts.
+
+But being in this quadrant is far from a death sentence. Karlsson is experiencing a career renaissance in San Jose. His 34 points in 28 games rank eighth in the NHL and first among defensemen. Eichel and Stone are producing well again for the second-place Golden Knights. The data above represents bad contracts' effects in one season, but this exercise can be repeated with different players every season. Still, the theme of bad contracts correlating to bad performance is constant. 
+
+```{r}
+beeswarm_21 <- joined21_limited %>% mutate(
+ result = case_when(
+   team == "BUF" | team == "DET" | team == "OTT" | team == "MTL" | team == "NYI" | team == "CBJ" | team == "NJD" | team == "PHI" | team == "WPG" | team == "CHI" | team == "ARI" | team == "VGK" | team == "VAN" | team == "SJS" | team == "ANA" | team == "SEA" ~ "DNQ",
+   team == "WSH" | team == "TOR" | team == "BOS" | team == "PIT" | team == "NSH" | team == "MIN" | team == "DAL" | team == "LAK" ~ "Eliminated Round 1",
+   team == "FLA" | team == "CAR" | team == "STL" | team == "CGY" ~ "Eliminated Round 2",
+   team == "COL" | team == "TBL" | team == "NYR" | team == "EDM" ~ "Final Four"),
+ 
+ playoffs = case_when(
+   team == "BUF" | team == "DET" | team == "OTT" | team == "MTL" | team == "NYI" | team == "CBJ" | team == "NJD" | team == "PHI" | team == "WPG" | team == "CHI" | team == "ARI" | team == "VGK" | team == "VAN" | team == "SJS" | team == "ANA" | team == "SEA" ~ "No Playoffs",
+   team == "WSH" | team == "TOR" | team == "BOS" | team == "PIT" | team == "NSH" | team == "MIN" | team == "DAL" | team == "LAK" |
+   team == "FLA" | team == "CAR" | team == "STL" | team == "CGY" |
+   team == "COL" | team == "TBL" | team == "NYR" | team == "EDM" ~ "Playoffs")
+ )
+
+Nathan_Mackinnon <- beeswarm_21 %>% filter(Player == "Nathan MacKinnon")
+Auston_Matthews <- beeswarm_21 %>% filter(Player == "Auston Matthews")
+Brad_Marchand <- beeswarm_21 %>% filter(Player == "Brad Marchand")
+Drew_Doughty <- beeswarm_21 %>% filter(Player == "Drew Doughty")
+Erik_Karlsson <- beeswarm_21 %>% filter(Player == "Erik Karlsson")
+Tyler_seguin <- beeswarm_21 %>% filter(Player == "Tyler Seguin")
+
+ggplot() + 
+  geom_jitter(data=beeswarm_21, aes(x=result, y=gameScore, size=Cap_Hit), color="grey") +
+  geom_jitter(data=Nathan_Mackinnon, aes(x=result, y=gameScore, size=Cap_Hit), color="purple") +
+  geom_text_repel(data=Nathan_Mackinnon, aes(x=result, y=gameScore, label=Player)) +
+  geom_jitter(data=Auston_Matthews, aes(x=result, y=gameScore, size=Cap_Hit), color="blue") +
+  geom_text_repel(data=Auston_Matthews, aes(x=result, y=gameScore, label=Player)) +
+  geom_jitter(data=Brad_Marchand, aes(x=result, y=gameScore, size=Cap_Hit), color="yellow") +
+  geom_text_repel(data=Brad_Marchand, aes(x=result, y=gameScore, label=Player)) +
+  geom_jitter(data=Drew_Doughty, aes(x=result, y=gameScore, size=Cap_Hit), color="black") +
+  geom_text_repel(data=Drew_Doughty, aes(x=result, y=gameScore, label=Player)) +
+  geom_jitter(data=Erik_Karlsson, aes(x=result, y=gameScore, size=Cap_Hit), color="turquoise 3") +
+  geom_text_repel(data=Erik_Karlsson, aes(x=result, y=gameScore, label=Player)) +
+  geom_jitter(data=Tyler_seguin, aes(x=result, y=gameScore, size=Cap_Hit), color="green") +
+  geom_text_repel(data=Tyler_seguin, aes(x=result, y=gameScore, label=Player)) +
+  labs(title="Higher Game Score, Better Shot at the Playoffs", subtitle="Although it sounds intuituve, the highlighted players show how important contract efficiency is in the NHL", caption="Source: MoneyPuck | By Ben Baruch")  + theme_minimal() + 
+  theme(
+    plot.title = element_text(size = 16, face = "bold"),
+    axis.title = element_text(size = 10), 
+    plot.subtitle = element_text(size=12), 
+    panel.grid.minor = element_blank()
+    ) +
+  scale_size(range = c(1, 10), name="Cap Hit")
+
+  
+means_medians_21 <- beeswarm_21 %>% group_by(result) %>% summarize(
+  count = n(),
+  median_gameScore = median(gameScore),
+  mean_gameScore = mean(gameScore)
+)
+
+ggplot() + 
+  geom_point(data=beeswarm_21, aes(x=Cap_Hit, y=gameScore)) +
+  facet_wrap(~result)
+
+ggplot() +
+  geom_jitter(data=beeswarm_21, aes(x=playoffs, y=gameScore, size=Cap_Hit), color="grey") +
+  geom_jitter(data=Nathan_Mackinnon, aes(x=playoffs, y=gameScore, size=Cap_Hit), color="purple") +
+  geom_text_repel(data=Nathan_Mackinnon, aes(x=playoffs, y=gameScore, label=Player)) +
+  geom_jitter(data=Auston_Matthews, aes(x=playoffs, y=gameScore, size=Cap_Hit), color="blue") +
+  geom_text_repel(data=Auston_Matthews, aes(x=playoffs, y=gameScore, label=Player)) +
+  geom_jitter(data=Brad_Marchand, aes(x=playoffs, y=gameScore, size=Cap_Hit), color="yellow") +
+  geom_text_repel(data=Brad_Marchand, aes(x=playoffs, y=gameScore, label=Player)) +
+  geom_jitter(data=Erik_Karlsson, aes(x=playoffs, y=gameScore, size=Cap_Hit), color="turquoise 3") +
+  geom_text_repel(data=Erik_Karlsson, aes(x=playoffs, y=gameScore, label=Player)) +
+  geom_jitter(data=Tyler_seguin, aes(x=playoffs, y=gameScore, size=Cap_Hit), color="green") +
+  geom_text_repel(data=Tyler_seguin, aes(x=playoffs, y=gameScore, label=Player)) +
+  labs(title="Higher Game Score, Better Shot at the Playoffs", subtitle="Since we only have regular season data, this chart differentiates players that did/didn't qualify for the playoffs", caption="Source: MoneyPuck | By Ben Baruch")  + theme_minimal() + 
+  theme(
+    plot.title = element_text(size = 16, face = "bold"),
+    axis.title = element_text(size = 10), 
+    plot.subtitle = element_text(size=10), 
+    panel.grid.minor = element_blank()
+    ) +
+  scale_size(range = c(1, 10), name="Cap Hit")
+
+#model_coefs <- function(formula, data) {
+ #coefs <- lm(formula, data)$coefficients
+ #data.frame(coef = names(coefs), value = coefs)
+#}
+
+#beeswarm_21 %>%
+  #dplyr::mutate(factor_gameScore = factor(gameScore)) %>%
+  #dplyr::nest_by(factor_gameScore) %>%
+  #dplyr::summarise(model_coefs(gameScore ~ Cap_Hit, beeswarm_21)) %>% 
+  #tidyr::pivot_wider(names_from = coef, values_from = value) 
+```
+The data also showed that teams that made the playoffs were getting more out of players they were paying less for. None of the teams eliminated in the second round of the playoffs paid a single player more than $8.75 million per season. Only five players in the final four made more than that. The top two (Connor McDavid and Artemi Panarin) didn't make the finals.  
+
+The beeswarm charts also show that players whose teams made the playoffs had better gameScores overall. Here's how all four categories fared:
+
+```{r}
+means_medians_21
+```
+The DNQ players had the worst gameScores, by far. My hypothesis for why the players eliminated in round two had the highest mean and median is because the data for this analysis is from the regular season, not the playoffs. 
+
+```{r}
+joined22_limited_DNQ <- joined22_limited %>% filter(team == "BUF" | team == "WSH" | team == "OTT" | team == "MTL" | team == "FLA" | team == "CBJ" | team == "NYR" | team == "PHI" | team == "CGY" | team == "CHI" | team == "ARI" | team == "NSH" | team == "VAN" | team == "SJS" | team == "ANA" | team == "STL") 
+
+joined22_limited_playoff_position <- joined22_limited %>% filter(team == "NYI" | team == "TOR" | team == "BOS" | team == "PIT" | team == "SEA" | team == "MIN" | team == "DAL" | team == "LAK" | team == "VGK" | team == "CAR" | team == "WPG" | team == "DET" | team == "COL" | team == "TBL" | team == "NJD" | team == "EDM")
+
+ggplot() + 
+  geom_point(data=joined22_limited, aes(x=Cap_Hit, y=gameScore)) +
+  geom_smooth(data=joined22, aes(x=Cap_Hit, y=gameScore), method="lm") +
+  geom_point(data=joined22_limited_DNQ, aes(x=Cap_Hit, y=gameScore), color = "red") +
+  geom_point(data=joined22_limited_playoff_position, aes(x=Cap_Hit, y=gameScore), color = "blue") +
+  labs(title="The Line Between Good and Bad Contracts 22-23", subtitle="Repeating the exercise we tried for 21-22, we see a similar pattern", caption="Source: MoneyPuck | By Ben Baruch")  + theme_minimal() + 
+  theme(
+    plot.title = element_text(size = 16, face = "bold"),
+    axis.title = element_text(size = 10), 
+    plot.subtitle = element_text(size=10), 
+    panel.grid.minor = element_blank()
+    ) 
+```
+```{r}
+beeswarm_22 <- joined22_limited %>% mutate(
+  playoffs = case_when(
+    team == "BUF" | team == "WSH" | team == "OTT" | team == "MTL" | team == "FLA" | team == "CBJ" | team == "NYR" | team == "PHI" | team == "CGY" | team == "CHI" | team == "ARI" | team == "NSH" | team == "VAN" | team == "SJS" | team == "ANA" | team == "STL" ~ "no playoffs", 
+    team == "NYI" | team == "TOR" | team == "BOS" | team == "PIT" | team == "SEA" | team == "MIN" | team == "DAL" | team == "LAK" | team == "VGK" | team == "CAR" | team == "WPG" | team == "DET" | team == "COL" | team == "TBL" | team == "NJD" | team == "EDM" ~ "playoffs"
+  )
+)
+
+ggplot() + 
+  geom_jitter(data=beeswarm_22, aes(x=playoffs, y=gameScore, size=Cap_Hit), color="grey") +
+  scale_size(range = c(2, 7), name="Cap Hit")
+
+means_medians_22 <- beeswarm_22 %>% group_by(playoffs) %>% summarize(
+  count = n(),
+  median_gameScore = median(gameScore),
+  mean_gameScore = mean(gameScore)
+)
+
+means_medians_22
+
+ggplot() + 
+  geom_point(data=beeswarm_22, aes(x=Cap_Hit, y=gameScore)) +
+  facet_wrap(~playoffs)
+```
+
+The patterns we saw last year are continuing this year, despite a smaller sample size. Players whose teams are in playoff contention have a higher mean and median gameScore, and that's represented in the beeswarm charts. 
+
+While these conclusions are slightly intuitive, it shows how valuable contract management is in a salary cap league. It might not always be the fault of a general manager - injuries are unfortunate realities of sports. Though salary allocation could affect the ability of a general manager to pivot in the event of injuries or other unforeseen circumstances. Indeed, the teams that allocate their money properly tend to give themselves a better shot at an NHL championship. 

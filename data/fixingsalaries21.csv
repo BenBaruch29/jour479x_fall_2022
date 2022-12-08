@@ -1,0 +1,1757 @@
+"","Player","Tm","Position","Cap_Hit"
+"1","Connor McDavid
+","EDM","C",12500000
+"2","Artemi Panarin
+","NYR","LW",11642857
+"3","Auston Matthews
+","TOR","C",11640250
+"4","Erik Karlsson
+","SJS","D",11500000
+"5","John Tavares
+","TOR","C",1.1e+07
+"6","Drew Doughty
+","LAK","D",1.1e+07
+"7","Mitchell Marner
+","TOR","RW",10903000
+"8","Carey Price
+","MTL","G",10500000
+"9","Patrick Kane
+","CHI","RW",10500000
+"10","Jonathan Toews
+","CHI","C",10500000
+"11","Jack Eichel
+","VGK","C",1e+07
+"12","Sergei Bobrovsky
+","FLA","G",1e+07
+"13","Anze Kopitar
+","LAK","C",1e+07
+"14","Tyler Seguin
+","DAL","C",9850000
+"15","Mark Stone
+","VGK","RW",9500000
+"16","Alex Ovechkin
+","WAS","LW",9500000
+"17","Andrei Vasilevskiy
+","TBL","G",9500000
+"18","Nikita Kucherov
+","TBL","RW",9500000
+"19","Evgeni Malkin
+","PIT","C",9500000
+"20","Jamie Benn
+","DAL","LW",9500000
+"21","Mikko Rantanen
+","COL","RW",9250000
+"22","Nicklas Backstrom
+","WAS","C",9200000
+"23","Roman Josi
+","NSH","D",9059000
+"24","Jeff Skinner
+","BUF","LW",9e+06
+"25","Cale Makar
+","COL","D",9e+06
+"26","P.K. Subban
+","NJD","D",9e+06
+"27","Dougie Hamilton
+","NJD","D",9e+06
+"28","Kirill Kaprizov
+","MIN","LW",9e+06
+"29","Alex Pietrangelo
+","VGK","D",8800000
+"30","Sidney Crosby
+","PIT","C",8700000
+"31","Leon Draisaitl
+","EDM","C",8500000
+"32","Steven Stamkos
+","TBL","C",8500000
+"33","Sebastian Aho
+","CAR","LW",8460250
+"34","Miro Heiskanen
+","DAL","D",8450000
+"35","Claude Giroux
+","FLA","C",8275000
+"36","Jakub Voracek
+","CBJ","RW",8250063
+"37","Blake Wheeler
+","WPG","RW",8250000
+"38","Oliver Ekman-Larsson
+","VAN","D",8250000
+"39","Brady Tkachuk
+","OTT","LW",8208571
+"40","Thomas Chabot
+","OTT","D",8e+06
+"41","John Carlson
+","WAS","D",8e+06
+"42","Matt Duchene
+","NSH","C",8e+06
+"43","Ryan Johansen
+","NSH","C",8e+06
+"44","Brent Burns
+","SJS","D",8e+06
+"45","Logan Couture
+","SJS","C",8e+06
+"46","Jacob Trouba
+","NYR","D",8e+06
+"47","Victor Hedman
+","TBL","D",7875000
+"48","Shea Weber
+","MTL","D",7857143
+"49","Quinn Hughes
+","VAN","D",7850000
+"50","Evgeny Kuznetsov
+","WAS","C",7800000
+"51","Andrei Svechnikov
+","CAR","RW",7750000
+"52","Jared Spurgeon
+","MIN","D",7575000
+"53","Ryan O'Reilly
+","STL","C",7500000
+"54","Vladimir Tarasenko
+","STL","RW",7500000
+"55","Aaron Ekblad
+","FLA","D",7500000
+"56","Patrik Laine
+","CBJ","RW",7500000
+"57","Elias Pettersson
+","VAN","C",7350000
+"58","Nico Hischier
+","NJD","C",7250000
+"59","Kris Letang
+","PIT","D",7250000
+"60","Clayton Keller
+","ARI","C",7150000
+"61","Kevin Hayes
+","PHI","C",7142857
+"62","Kyle Connor
+","WPG","LW",7142857
+"63","Max Pacioretty
+","VGK","LW",7e+06
+"64","James Van","Riemsdyk
+ PHI","LW",7e+06
+"65","Gabriel Landeskog
+","COL","LW",7e+06
+"66","Anders Lee
+","NYI","C",7e+06
+"67","Mathew Barzal
+","NYI","C",7e+06
+"68","Marc-Edouard Vlasic
+","SJS","D",7e+06
+"69","Matthew Tkachuk
+","CGY","LW",7e+06
+"70","Joe Pavelski
+","DAL","C",7e+06
+"71","Marc-Andre Fleury
+","MIN","G",7e+06
+"72","William Nylander
+","TOR","C",6962366
+"73","Brent Seabrook
+","TBL","D",6875000
+"74","Patrice Bergeron
+","BOS","C",6875000
+"75","Ryan Kesler
+","ARI","C",6875000
+"76","Philip Kessel
+","ARI","RW",6800000
+"77","Ivan Provorov
+","PHI","D",6750000
+"78","Brayden Point
+","TBL","C",6750000
+"79","Ryan McDonagh
+","TBL","D",6750000
+"80","Mark Giordano
+","TOR","D",6750000
+"81","Johnny Gaudreau
+","CGY","LW",6750000
+"82","David Pastrnak
+","BOS","RW",6666666
+"83","Brendan Gallagher
+","MTL","RW",6500000
+"84","Justin Faulk
+","STL","D",6500000
+"85","Brayden Schenn
+","STL","C",6500000
+"86","Torey Krug
+","STL","D",6500000
+"87","Sam Reinhart
+","FLA","C",6500000
+"88","Cam Fowler
+","ANA","D",6500000
+"89","Chris Kreider
+","NYR","LW",6500000
+"90","Alexander Debrincat
+","CHI","RW",6400000
+"91","John Gibson
+","ANA","G",6400000
+"92","Sean Monahan
+","CGY","C",6375000
+"93","Nathan MacKinnon
+","COL","C",6300000
+"94","Jeff Petry
+","MTL","D",6250000
+"95","Matthew Murray
+","OTT","G",6250000
+"96","Ryan Ellis
+","PHI","D",6250000
+"97","Joshua Morrissey
+","WPG","D",6250000
+"98","Alexander Radulov
+","DAL","RW",6250000
+"99","Connor Hellebuyck
+","WPG","G",6166666
+"100","Mark Scheifele
+","WPG","C",6125000
+"101","Brad Marchand
+","BOS","LW",6125000
+"102","Jesperi Kotkaniemi
+","CAR","C",6100035
+"103","Dylan Larkin
+","DET","C",6100000
+"104","Jordan Staal
+","CAR","C",6e+06
+"105","Jordan Binnington
+","STL","G",6e+06
+"106","Filip Forsberg
+","NSH","C",6e+06
+"107","Johnny Boychuk
+","BUF","D",6e+06
+"108","Rasmus Dahlin
+","BUF","D",6e+06
+"109","Kyle Okposo
+","BUF","RW",6e+06
+"110","Nikolaj Ehlers
+","WPG","LW",6e+06
+"111","Erik Johnson
+","COL","D",6e+06
+"112","Jake Guentzel
+","PIT","C",6e+06
+"113","Brock Nelson
+","NYI","C",6e+06
+"114","Taylor Hall
+","BOS","LW",6e+06
+"115","Timo Meier
+","SJS","LW",6e+06
+"116","Loui Eriksson
+","ARI","RW",6e+06
+"117","Milan Lucic
+","CGY","LW",6e+06
+"118","Tyler Myers
+","VAN","D",6e+06
+"119","Jacob Markstrom
+","CGY","G",6e+06
+"120","Mats Zuccarello-Aasen
+","MIN","RW",6e+06
+"121","Mathew Dumba
+","MIN","D",6e+06
+"122","Jonas Brodin
+","MIN","D",6e+06
+"123","Nate Schmidt
+","WPG","D",5950000
+"124","Phillip Grubauer
+","SEA","G",5900000
+"125","William Karlsson
+","VGK","C",5900000
+"126","Jonathan Huberdeau
+","FLA","LW",5900000
+"127","Aleksander Barkov
+","FLA","C",5900000
+"128","Cameron Atkinson
+","PHI","RW",5875000
+"129","Neal Pionk
+","WPG","D",5875000
+"130","Dustin Brown
+","LAK","RW",5875000
+"131","Brock Boeser
+","VAN","RW",5875000
+"132","Nick Schmaltz
+","ARI","C",5850000
+"133","Adam Henrique
+","ANA","C",5825000
+"134","Pavel Buchnevich
+","STL","LW",5800000
+"135","Jonathan Quick
+","LAK","G",5800000
+"136","Esa Lindell
+","DAL","D",5800000
+"137","T.J. Oshie
+","WAS","RW",5750000
+"138","Adam Pelech
+","NYI","D",5750000
+"139","Anthony Mantha
+","WAS","RW",5700000
+"140","Igor Shesterkin
+","NYR","G",5666667
+"141","Jacob Muzzin
+","TOR","D",5625000
+"142","Tomas Hertl
+","SJS","C",5625000
+"143","Darnell Nurse
+","EDM","D",5600000
+"144","Duncan Keith
+","EDM","D",5538462
+"145","Jordan Eberle
+","SEA","RW",5500000
+"146","Jaden Schwartz
+","SEA","LW",5500000
+"147","Jonathan Drouin
+","MTL","LW",5500000
+"148","Josh Anderson
+","MTL","RW",5500000
+"149","Nick Leddy
+","STL","D",5500000
+"150","Colton Parayko
+","STL","D",5500000
+"151","Zach Hyman
+","EDM","C",5500000
+"152","Travis Konecny
+","PHI","C",5500000
+"153","Jason Zucker
+","PIT","LW",5500000
+"154","Gustav Nyquist
+","CBJ","RW",5500000
+"155","Phillip Danault
+","LAK","C",5500000
+"156","Andrew Ladd
+","ARI","LW",5500000
+"157","Bo Horvat
+","VAN","C",5500000
+"158","Anton Stralman
+","ARI","D",5500000
+"159","Teuvo Teravainen
+","CAR","C",5400000
+"160","Seth Jones
+","CHI","D",5400000
+"161","Rasmus Ristolainen
+","PHI","D",5400000
+"162","Oliver Bjorkstrand
+","CBJ","RW",5400000
+"163","Mika Zibanejad
+","NYR","C",5350000
+"164","Mikael Backlund
+","CGY","C",5350000
+"165","Max Domi
+","CAR","LW",5300000
+"166","Jaccob Slavin
+","CAR","D",5300000
+"167","Ondrej Palat
+","TBL","LW",5300000
+"168","Patric Hornqvist
+","FLA","RW",5300000
+"169","Bryan Little
+","ARI","C",5291000
+"170","Jeff Carter
+","PIT","C",5272727
+"171","Jakub Vrana
+","DET","LW",5250000
+"172","Alec Martinez
+","VGK","D",5250000
+"173","Brady Skjei
+","CAR","D",5250000
+"174","Nino Niederreiter
+","CAR","RW",5250000
+"175","Charlie Coyle
+","BOS","C",5250000
+"176","J.T. Miller
+","VAN","C",5250000
+"177","Jakob Silfverberg
+","ANA","RW",5250000
+"178","Joel Eriksson","Ek
+ MIN","C",5250000
+"179","Hampus Lindholm
+","BOS","D",5205556
+"180","Shea Theodore
+","VGK","D",5200000
+"181","Yanni Gourde
+","SEA","C",5166666
+"182","Thomas Wilson
+","WAS","RW",5166666
+"183","Ryan Nugent-Hopkins
+","EDM","C",5125000
+"184","Dmitry Orlov
+","WAS","D",5100000
+"185","Kevin Fiala
+","MIN","LW",5100000
+"186","Danny DeKeyser
+","DET","D",5e+06
+"187","Reilly Smith
+","VGK","RW",5e+06
+"188","Evgenii Dadonov
+","VGK","LW",5e+06
+"189","Robin Lehner
+","VGK","G",5e+06
+"190","Jonathan Marchessault
+","VGK","C",5e+06
+"191","Tyler Johnson
+","CHI","C",5e+06
+"192","Mikael Granlund
+","NSH","C",5e+06
+"193","Juuse Saros
+","NSH","G",5e+06
+"194","Pierre-Luc Dubois
+","WPG","LW",5e+06
+"195","Samuel Girard
+","COL","D",5e+06
+"196","Morgan Rielly
+","TOR","D",5e+06
+"197","T.J. Brodie
+","TOR","D",5e+06
+"198","Zachary Werenski
+","CBJ","D",5e+06
+"199","Ryan Pulock
+","NYI","D",5e+06
+"200","Jean-Gabriel Pageau
+","NYI","C",5e+06
+"201","Semyon Varlamov
+","NYI","G",5e+06
+"202","Josh Bailey
+","NYI","LW",5e+06
+"203","Kyle Palmieri
+","NYI","RW",5e+06
+"204","Linus Ullmark
+","BOS","G",5e+06
+"205","Thatcher Demko
+","VAN","G",5e+06
+"206","Alex Goligoski
+","MIN","D",5e+06
+"207","Drake Batherson
+","OTT","C",4975000
+"208","Noah Hanifin
+","CGY","D",4950000
+"209","Conor Garland
+","VAN","RW",4950000
+"210","Ben Bishop
+","DAL","G",4916667
+"211","Andre Burakovsky
+","COL","LW",4900000
+"212","Charles Mcavoy
+","BOS","D",4900000
+"213","Blake Coleman
+","CGY","C",4900000
+"214","Michael Matheson
+","PIT","D",4875000
+"215","Elias Lindholm
+","CGY","C",4850000
+"216","Anthony Cirelli
+","TBL","C",4800000
+"217","Mikhail Sergachev
+","TBL","D",4800000
+"218","Tyler Bertuzzi
+","DET","LW",4750000
+"219","Vincent Trocheck
+","CAR","C",4750000
+"220","Colin White
+","OTT","C",4750000
+"221","Alex Tuch
+","BUF","RW",4750000
+"222","Kevin Labanc
+","SJS","RW",4725000
+"223","Travis Sanheim
+","PHI","D",4675000
+"224","Jamie Oleksiak
+","SEA","D",4600000
+"225","Jakob Chychrun
+","ARI","D",4600000
+"226","Calvin de","Haan
+ CHI","D",4550000
+"227","Rasmus Andersson
+","CGY","D",4550000
+"228","Shayne Gostisbehere
+","ARI","D",4500000
+"229","Ryan Strome
+","NYR","C",4500000
+"230","Alexander Wennberg
+","SEA","C",4500000
+"231","Frederik Andersen
+","CAR","G",4500000
+"232","Mike Hoffman
+","MTL","LW",4500000
+"233","Nikita Zaitsev
+","OTT","D",4500000
+"234","Brandon Saad
+","STL","LW",4500000
+"235","Tyson Barrie
+","EDM","D",4500000
+"236","Mikko Koskinen
+","EDM","G",4500000
+"237","Nazem Kadri
+","COL","C",4500000
+"238","Darcy Kuemper
+","COL","G",4500000
+"239","Tomas Tatar
+","NJD","LW",4500000
+"240","Chris Tanev
+","CGY","D",4500000
+"241","Christian Dvorak
+","MTL","C",4450000
+"242","Alexander Killorn
+","TBL","C",4450000
+"243","Sam Bennett
+","FLA","C",4425000
+"244","Filip Hronek
+","DET","D",4400000
+"245","John Marino
+","PIT","D",4400000
+"246","Sean Couturier
+","PHI","C",4333333
+"247","Viktor Arvidsson
+","LAK","LW",4250000
+"248","John Klingberg
+","DAL","D",4250000
+"249","Tyler Toffoli
+","CGY","RW",4250000
+"250","Oscar Klefbom
+","EDM","D",4167000
+"251","Damon Severson
+","NJD","D",4166666
+"252","Anthony Beauvillier
+","NYI","LW",4150000
+"253","Jonathan Bernier
+","NJD","G",4125000
+"254","Josh Manson
+","COL","D",4100000
+"255","Devon Toews
+","COL","D",4100000
+"256","Brian Dumoulin
+","PIT","D",4100000
+"257","Brandon Carlo
+","BOS","D",4100000
+"258","Olli Maatta
+","LAK","D",4083333
+"259","Jake Gardiner
+","CAR","D",4050000
+"260","Marcus Pettersson
+","PIT","D",4025175
+"261","Brett Pesce
+","CAR","D",4025000
+"262","Vince Dunn
+","SEA","D",4e+06
+"263","Victor Rask
+","SEA","C",4e+06
+"264","Adam Larsson
+","SEA","D",4e+06
+"265","David Perron
+","STL","LW",4e+06
+"266","Jake McCabe
+","CHI","D",4e+06
+"267","Justin Schultz
+","WAS","D",4e+06
+"268","Elvis Merzlikins
+","CBJ","G",4e+06
+"269","Alex Iafallo
+","LAK","C",4e+06
+"270","Ilya Sorokin
+","NYI","G",4e+06
+"271","Carter Hart
+","PHI","G",3979000
+"272","Joonas Donskoi
+","SEA","RW",3900000
+"273","Andrew Shaw
+","CHI","C",3900000
+"274","Brenden Dillon
+","WPG","D",3900000
+"275","Kevin Shattenkirk
+","ANA","D",3900000
+"276","Colin Miller
+","BUF","D",3875000
+"277","Connor Murphy
+","CHI","D",3850000
+"278","Petr Mrazek
+","TOR","G",3800000
+"279","Nick Foligno
+","BOS","LW",3800000
+"280","Rickard Rakell
+","PIT","C",3789444
+"281","Mattias Ekholm
+","NSH","D",3750000
+"282","Paul Stastny
+","WPG","C",3750000
+"283","Boone Jenner
+","CBJ","C",3750000
+"284","Nikita Zadorov
+","CGY","D",3750000
+"285","Will Butcher
+","BUF","D",3733333
+"286","Dominik Kubalik
+","CHI","LW",3700000
+"287","Matthew Grzelcyk
+","BOS","D",3687500
+"288","Jake DeBrusk
+","BOS","LW",3675000
+"289","Cameron Talbot
+","MIN","G",3666666
+"290","Ryan Suter
+","DAL","D",3650000
+"291","Barclay Goodrow
+","NYR","LW",3641666
+"292","Andrew Copp
+","NYR","C",3640000
+"293","Thomas Greiss
+","DET","G",3600000
+"294","Connor Brown
+","OTT","RW",3600000
+"295","Brandon Tanev
+","SEA","C",3500000
+"296","Chris Driedger
+","SEA","G",3500000
+"297","David Savard
+","MTL","D",3500000
+"298","Joel Edmundson
+","MTL","D",3500000
+"299","Chris Tierney
+","OTT","C",3500000
+"300","Lars Eller
+","WAS","C",3500000
+"301","Ben Chiarot
+","FLA","D",3500000
+"302","Brandon Montour
+","FLA","D",3500000
+"303","J.T Compher
+","COL","C",3500000
+"304","Tristan Jarry
+","PIT","G",3500000
+"305","Bryan Rust
+","PIT","RW",3500000
+"306","Alexander Kerfoot
+","TOR","C",3500000
+"307","Alexander Edler
+","LAK","D",3500000
+"308","Cal Clutterbuck
+","NYI","RW",3500000
+"309","Micheal Ferland
+","VAN","LW",3500000
+"310","Paul Byron
+","MTL","C",3400000
+"311","Joel Armia
+","MTL","RW",3400000
+"312","Andreas Johnsson
+","NJD","LW",3400000
+"313","Marco Scandella
+","STL","D",3275000
+"314","Pius Suter
+","DET","C",3250000
+"315","Cody Ceci
+","EDM","D",3250000
+"316","MacKenzie Weegar
+","FLA","D",3250000
+"317","Adam Lowry
+","WPG","LW",3250000
+"318","Radek Faksa
+","DAL","C",3250000
+"319","Tanner Pearson
+","VAN","LW",3250000
+"320","Dmitrij Jaskin
+","ARI","RW",3200000
+"321","Zack Kassian
+","EDM","RW",3200000
+"322","Kasperi Kapanen
+","PIT","RW",3200000
+"323","Ryan Graves
+","NJD","D",3166666
+"324","Matt Roy
+","LAK","D",3150000
+"325","Roope Hintz
+","DAL","LW",3150000
+"326","Craig Smith
+","BOS","C",3100000
+"327","Marcus Foligno
+","MIN","LW",3100000
+"328","Victor Olofsson
+","BUF","RW",3050000
+"329","Ryan Getzlaf
+","ANA","C",3e+06
+"330","Mike Reilly
+","BOS","D",3e+06
+"331","Ryan Lindgren
+","NYR","D",3e+06
+"332","Jay Beagle
+","ARI","RW",3e+06
+"333","Antoine Roussel
+","ARI","LW",3e+06
+"334","Alex Nedeljkovic
+","DET","G",3e+06
+"335","Travis Hamonic
+","OTT","D",3e+06
+"336","Dylan Strome
+","CHI","C",3e+06
+"337","Scott Laughton
+","PHI","C",3e+06
+"338","Oskar Lindblom
+","PHI","LW",3e+06
+"339","Anthony Duclair
+","FLA","LW",3e+06
+"340","Dylan Demelo
+","WPG","D",3e+06
+"341","Derek Forbort
+","BOS","D",3e+06
+"342","Robby Fabbri
+","DET","C",2950000
+"343","Erik Cernak
+","TBL","D",2950000
+"344","Jared McCann
+","SEA","LW",2940000
+"345","Ian Cole
+","CAR","D",2900000
+"346","Jake Allen
+","MTL","G",2875000
+"347","Colton Sissons
+","NSH","C",2857412
+"348","Jordan Kyrou
+","STL","C",2800000
+"349","Robert Thomas
+","STL","C",2800000
+"350","MacKenzie Blackwood
+","NJD","G",2800000
+"351","Joonas Korpisalo
+","CBJ","G",2800000
+"352","Vladislav Gavrikov
+","CBJ","D",2800000
+"353","Carson Soucy
+","SEA","D",2750000
+"354","Oskar Sundqvist
+","DET","C",2750000
+"355","Chandler Stephenson
+","VGK","C",2750000
+"356","Carl Hagelin
+","WAS","LW",2750000
+"357","Warren Foegele
+","EDM","LW",2750000
+"358","Miles Wood
+","NJD","LW",2750000
+"359","Jesper Bratt
+","NJD","LW",2750000
+"360","Brock McGinn
+","PIT","LW",2750000
+"361","Markus Nutivaara
+","FLA","D",2700000
+"362","Andreas Athanasiou
+","LAK","C",2700000
+"363","Gustav Forsling
+","FLA","D",2666667
+"364","Sean Walker
+","LAK","D",2650000
+"365","Jason Dickinson
+","VAN","C",2650000
+"366","Denis Gurianov
+","DAL","RW",2550000
+"367","Frank Vatrano
+","NYR","LW",2533333
+"368","Patrik Nemeth
+","NYR","D",2500000
+"369","Nicholas Ritchie
+","ARI","LW",2500000
+"370","Brayden McNabb
+","VGK","D",2500000
+"371","Artem Zub
+","OTT","D",2500000
+"372","Michal Kempny
+","WAS","D",2500000
+"373","Nick Jensen
+","WAS","D",2500000
+"374","Radko Gudas
+","FLA","D",2500000
+"375","Valeri Nichushkin
+","COL","RW",2500000
+"376","Henri Jokiharju
+","BUF","D",2500000
+"377","Casey Mittelstadt
+","BUF","C",2500000
+"378","Sean Kuraly
+","CBJ","C",2500000
+"379","Casey Cizikas
+","NYI","C",2500000
+"380","Tucker Poolman
+","VAN","D",2500000
+"381","Alexander Georgiev
+","NYR","G",2425000
+"382","Andrew Mangiapane
+","CGY","LW",2425000
+"383","Dante Fabbro
+","NSH","D",2400000
+"384","Erik Haula
+","BOS","C",2375000
+"385","Jake Bean
+","CBJ","D",2333333
+"386","Laurent Brossoit
+","VGK","G",2325000
+"387","Filip Chytil
+","NYR","LW",2300000
+"388","Luke Kunin
+","NSH","C",2300000
+"389","Artturi Lehkonen
+","COL","LW",2300000
+"390","Dillon Dube
+","CGY","C",2300000
+"391","Dmitry Kulikov
+","MIN","D",2250000
+"392","Ivan Barbashev
+","STL","C",2250000
+"393","Cody Eakin
+","BUF","C",2250000
+"394","Pavel Zacha
+","NJD","C",2250000
+"395","Radim Simek
+","SJS","D",2250000
+"396","James Reimer
+","SJS","G",2250000
+"397","Mike Smith
+","EDM","G",2200000
+"398","Zemgus Girgensons
+","BUF","C",2200000
+"399","Theodor Blueger
+","PIT","C",2200000
+"400","Adin Hill
+","SJS","G",2175000
+"401","Evander Kane
+","EDM","LW",2108696
+"402","Jordan Greenway
+","MIN","LW",2100000
+"403","Adam Erne
+","DET","LW",2100000
+"404","Nick Bonino
+","SJS","C",2050000
+"405","Maxime Comtois
+","ANA","LW",2037500
+"406","Tyson Jost
+","MIN","C",2e+06
+"407","Ethan Bear
+","CAR","D",2e+06
+"408","Marc Staal
+","DET","D",2e+06
+"409","Mattias Janmark
+","VGK","C",2e+06
+"410","Jesper Fast
+","CAR","RW",2e+06
+"411","Antti Raanta
+","CAR","G",2e+06
+"412","Michael Del","Zotto
+ OTT","D",2e+06
+"413","Ilya Samsonov
+","WAS","G",2e+06
+"414","Mark Borowiecki
+","NSH","D",2e+06
+"415","Martin Jones
+","PHI","G",2e+06
+"416","Zach Sanford
+","WPG","LW",2e+06
+"417","Ryan Murray
+","COL","D",2e+06
+"418","Pavel Francouz
+","COL","G",2e+06
+"419","Yegor Sharangovich
+","NJD","C",2e+06
+"420","Justin Holl
+","TOR","D",2e+06
+"421","Adrian Kempe
+","LAK","LW",2e+06
+"422","Vladislav Namestnikov
+","DAL","C",2e+06
+"423","Braden Holtby
+","DAL","G",2e+06
+"424","Calle Jarnkrok
+","CGY","C",2e+06
+"425","Erik Gudbranson
+","CGY","D",1950000
+"426","Trevor Moore
+","LAK","LW",1875000
+"427","Brett Kulak
+","EDM","D",1850000
+"428","Jack Roslovic
+","CBJ","C",1838362
+"429","Janne Kuokkanen
+","NJD","C",1825000
+"430","Justin Braun
+","NYR","D",1800000
+"431","Jordan Martinook
+","CAR","LW",1800000
+"432","Tomas Nosek
+","BOS","LW",1750000
+"433","Ryan Reaves
+","NYR","RW",1750000
+"434","Tyler Pitlick
+","MTL","RW",1750000
+"435","Zach Aston-Reese
+","ANA","C",1725000
+"436","Ryan Hartman
+","MIN","RW",1700000
+"437","Sonny Milano
+","ANA","LW",1700000
+"438","Nick Holden
+","OTT","D",1700000
+"439","Troy Stecher
+","LAK","D",1700000
+"440","Nick Blankenburg
+","CBJ","D",1688452
+"441","Noel Acciari
+","FLA","C",1666666
+"442","Kyle Turris
+","EDM","C",1650000
+"443","Jack Campbell
+","TOR","G",1650000
+"444","Dean Kukan
+","CBJ","D",1650000
+"445","Ilya Mikheyev
+","TOR","LW",1645000
+"446","Robert Hagg
+","FLA","D",1600000
+"447","Anders Bjork
+","BUF","LW",1600000
+"448","Brendan Lemieux
+","LAK","LW",1550000
+"449","Rudolfs Balcers
+","SJS","LW",1550000
+"450","Lawson Crouse
+","ARI","LW",1533333
+"451","Alexandre Texier
+","CBJ","C",1525000
+"452","Samuel Blais
+","NYR","LW",1500000
+"453","Derek Grant
+","ANA","LW",1500000
+"454","Austin Watson
+","OTT","LW",1500000
+"455","Garnet Hathaway
+","WAS","RW",1500000
+"456","Marcus Johansson
+","WAS","C",1500000
+"457","Conor Sheary
+","WAS","LW",1500000
+"458","Josh Archibald
+","EDM","RW",1500000
+"459","Nick Cousins
+","NSH","C",1500000
+"460","Brandon Hagel
+","TBL","LW",1500000
+"461","David Kampf
+","TOR","C",1500000
+"462","Matt Martin
+","NYI","LW",1500000
+"463","Jaroslav Halak
+","VAN","G",1500000
+"464","Luke Glendening
+","DAL","C",1500000
+"465","Travis Dermott
+","VAN","D",1500000
+"466","Andrej Sekera
+","DAL","D",1500000
+"467","Jani Hakanpaa
+","DAL","D",1500000
+"468","Michael Rasmussen
+","DET","C",1460000
+"469","Troy Terry
+","ANA","RW",1450000
+"470","Eeli Tolvanen
+","NSH","RW",1450000
+"471","Scott Mayfield
+","NYI","D",1450000
+"472","William Carrier
+","VGK","LW",1400000
+"473","Johan Larsson
+","WAS","LW",1400000
+"474","Tage Thompson
+","BUF","C",1400000
+"475","Robert Bortuzzo
+","STL","D",1375000
+"476","Chris Wagner
+","BOS","C",1350000
+"477","Jordan Oesterle
+","DET","D",1350000
+"478","Derek Stepan
+","CAR","C",1350000
+"479","Riley Stillman
+","CHI","D",1350000
+"480","Nicholas Paul
+","TBL","C",1350000
+"481","Ilya Lyubushkin
+","TOR","D",1350000
+"482","Haydn Fleury
+","SEA","D",1300000
+"483","Jan Rutta
+","TBL","D",1300000
+"484","Max Jones
+","ANA","LW",1295000
+"485","Kris Russell
+","EDM","D",1250000
+"486","Derek Ryan
+","EDM","C",1250000
+"487","David Rittich
+","NSH","G",1250000
+"488","Casey DeSmith
+","PIT","G",1250000
+"489","Nathan Beaulieu
+","PIT","D",1250000
+"490","Pierre Engvall
+","TOR","LW",1250000
+"491","Ondrej Kase
+","TOR","RW",1250000
+"492","Tyler Motte
+","NYR","C",1225000
+"493","Frederick Gaudreau
+","MIN","C",1200000
+"494","Joshua Brown
+","BOS","D",1200000
+"495","Nolan Patrick
+","VGK","C",1200000
+"496","Victor Mete
+","OTT","D",1200000
+"497","Jesse Puljujarvi
+","EDM","RW",1175000
+"498","Kailer Yamamoto
+","EDM","C",1175000
+"499","Ross Colton
+","TBL","C",1125000
+"500","Jonas Siegenthaler
+","NJD","D",1125000
+"501","Brandon Sutter
+","VAN","C",1125000
+"502","Dylan Gambrell
+","OTT","C",1100000
+"503","Danton Heinen
+","PIT","C",1100000
+"504","Michael Raffl
+","DAL","LW",1100000
+"505","Nicolas Aube-Kubel
+","COL","RW",1075000
+"506","Joel Kiviranta
+","DAL","LW",1050000
+"507","Trent Frederic
+","BOS","C",1050000
+"508","Vincent Hinostroza
+","BUF","C",1050000
+"509","Ryan Carpenter
+","CGY","C",1e+06
+"510","Nicolas Deslauriers
+","MIN","LW",1e+06
+"511","Connor Clifton
+","BOS","D",1e+06
+"512","Kodie Curran
+","BOS","D",1e+06
+"513","Christian Fischer
+","ARI","C",1e+06
+"514","Anthony DeAngelo
+","CAR","D",1e+06
+"515","Henrik Borgstrom
+","CHI","C",1e+06
+"516","Matthew Benning
+","NSH","D",1e+06
+"517","Corey Perry
+","TBL","RW",1e+06
+"518","Pierre-Edouard Bellemare
+","TBL","LW",1e+06
+"519","Andrew Cogliano
+","COL","LW",1e+06
+"520","Carter Verhaeghe
+","FLA","C",1e+06
+"521","Darren Helm
+","COL","C",1e+06
+"522","Evan Rodrigues
+","PIT","LW",1e+06
+"523","Kyle Clifford
+","TOR","C",1e+06
+"524","Ross Johnston
+","NYI","LW",1e+06
+"525","Alexander Barabanov
+","SJS","RW",1e+06
+"526","Adam Gaudette
+","OTT","C",997500
+"527","Jujhar Khaira
+","CHI","LW",975000
+"528","Maxim Mamin
+","FLA","C",975000
+"529","Michael Mcleod
+","NJD","C",975000
+"530","Eric Robinson
+","CBJ","LW",975000
+"531","Anthony Stolarz
+","ANA","G",950000
+"532","Mathieu Perreault
+","MTL","C",950000
+"533","Trevor Van","Riemsdyk
+ WAS","D",950000
+"534","Michael Bunting
+","TOR","LW",950000
+"535","Jake Oettinger
+","DAL","G",925000
+"536","Adam Fox
+","NYR","D",925000
+"537","Kaapo Kakko
+","NYR","RW",925000
+"538","Alexis Lafrenière
+","NYR","LW",925000
+"539","K'Andre Miller
+","NYR","D",925000
+"540","Braden Schneider
+","NYR","D",925000
+"541","Jack Ahcan
+","BOS","D",925000
+"542","Jeremy Swayman
+","BOS","G",925000
+"543","Lucas Raymond
+","DET","RW",925000
+"544","Jamie Drysdale
+","ANA","D",925000
+"545","Justin Barron
+","MTL","D",925000
+"546","Trevor Zegras
+","ANA","C",925000
+"547","Josh Norris
+","OTT","C",925000
+"548","Shane Pinto
+","OTT","C",925000
+"549","Jake Sanderson
+","OTT","D",925000
+"550","Tim Stützle
+","OTT","C",925000
+"551","Scott Perunovich
+","STL","D",925000
+"552","Kirby Dach
+","CHI","C",925000
+"553","Bobby Brink
+","PHI","RW",925000
+"554","Joel Farabee
+","PHI","LW",925000
+"555","Morgan Barron
+","WPG","C",925000
+"556","Dylan Samberg
+","WPG","D",925000
+"557","Aleksi Heponiemi
+","FLA","C",925000
+"558","Spencer Knight
+","FLA","G",925000
+"559","Anton Lundell
+","FLA","C",925000
+"560","Jesper Boqvist
+","NJD","C",925000
+"561","Alexander Holtz
+","NJD","RW",925000
+"562","Jack Hughes
+","NJD","C",925000
+"563","Reilly Walsh
+","NJD","D",925000
+"564","Mattias Samuelsson
+","BUF","D",925000
+"565","Michael Anderson
+","LAK","D",925000
+"566","Emil Bemstrom
+","CBJ","C",925000
+"567","Yegor Chinakhov
+","CBJ","RW",925000
+"568","Kent Johnson
+","CBJ","C",925000
+"569","Cole Sillinger
+","CBJ","C",925000
+"570","Daniil Tarasov
+","CBJ","G",925000
+"571","Mario Ferraro
+","SJS","D",925000
+"572","John Leonard
+","SJS","C",925000
+"573","Vasily Podkolzin
+","VAN","RW",925000
+"574","Rem Pitlick
+","MTL","C",917831
+"575","Alex Vlasic
+","CHI","D",916667
+"576","Owen Power
+","BUF","D",916667
+"577","Thomas Bordeleau
+","SJS","C",916667
+"578","Connor Mackey
+","CGY","D",912500
+"579","Ben Meyers
+","COL","LW",912500
+"580","Alex Newhook
+","COL","C",908333
+"581","Brett Ritchie
+","CGY","RW",9e+05
+"582","Jordie Benn
+","MIN","D",9e+05
+"583","Nick Bjugstad
+","MIN","C",9e+05
+"584","William Borgen
+","SEA","D",9e+05
+"585","Tyler Ennis
+","OTT","C",9e+05
+"586","Anton Forsberg
+","OTT","G",9e+05
+"587","MacKenzie MacEachern
+","STL","LW",9e+05
+"588","Keith Yandle
+","PHI","D",9e+05
+"589","Patrick Maroon
+","TBL","LW",9e+05
+"590","Brian Elliott
+","TBL","G",9e+05
+"591","Mason Appleton
+","WPG","C",9e+05
+"592","Logan Stanley
+","WPG","D",9e+05
+"593","Mark Pysyk
+","BUF","D",9e+05
+"594","Wayne Simmonds
+","TOR","RW",9e+05
+"595","Matthew Beniers
+","SEA","C",897500
+"596","Eetu Luostarinen
+","FLA","C",897500
+"597","Joe Veleno
+","DET","C",894167
+"598","Seth Jarvis
+","CAR","RW",894167
+"599","Filip Zadina
+","DET","RW",894167
+"600","Barrett Hayton
+","ARI","C",894167
+"601","Alexander Romanov
+","MTL","D",894167
+"602","Urho Vaakanainen
+","ANA","D",894167
+"603","Cole Perfetti
+","WPG","C",894167
+"604","Bowen Byram
+","COL","D",894167
+"605","Dawson Mercer
+","NJD","RW",894167
+"606","Dylan Cozens
+","BUF","C",894167
+"607","Rasmus Sandin
+","TOR","D",894167
+"608","Tobias Bjornfot
+","LAK","D",894167
+"609","Quinton Byfield
+","LAK","C",894167
+"610","Arthur Kaliyev
+","LAK","RW",894167
+"611","Gabe Vilardi
+","LAK","C",894167
+"612","Adam Boqvist
+","CBJ","D",894167
+"613","Oliver Wahlstrom
+","NYI","RW",894167
+"614","Noah Dobson
+","NYI","D",894167
+"615","Nils Hoglander
+","VAN","LW",891667
+"616","Jacob Bryson
+","BUF","D",889166
+"617","Janis Moser
+","ARI","D",886667
+"618","Brett Howden
+","VGK","C",885000
+"619","Marc McLaughlin
+","BOS","C",883750
+"620","Jack McBain
+","ARI","C",883750
+"621","Nathan Smith
+","ARI","C",883750
+"622","Matthew Boldy
+","MIN","LW",880833
+"623","Cole Caufield
+","MTL","RW",880833
+"624","Cameron York
+","PHI","D",880833
+"625","Justus Annunen
+","COL","G",880833
+"626","Kurtis Macdermid
+","COL","D",875000
+"627","Libor Hajek
+","NYR","D",874125
+"628","Kole Lind
+","SEA","RW",874125
+"629","Isac Lundestrom
+","ANA","C",874125
+"630","Sam Steel
+","ANA","C",874125
+"631","Lias Andersson
+","LAK","C",874125
+"632","Thomas Harley
+","DAL","D",863333
+"633","Moritz Seider
+","DET","D",863333
+"634","Martin Necas
+","CAR","C",863333
+"635","Nick Suzuki
+","MTL","C",863333
+"636","Victor Soderstrom
+","ARI","D",863333
+"637","Erik Brannstrom
+","OTT","D",863333
+"638","Connor McMichael
+","WAS","C",863333
+"639","Evan Bouchard
+","EDM","D",863333
+"640","Philip Tomasino
+","NSH","C",863333
+"641","Morgan Frost
+","PHI","C",863333
+"642","Owen Tippett
+","PHI","RW",863333
+"643","Nolan Foote
+","NJD","LW",863333
+"644","Ty Smith
+","NJD","D",863333
+"645","Peyton Krebs
+","BUF","C",863333
+"646","Timothy Liljegren
+","TOR","D",863333
+"647","Rasmus Kupari
+","LAK","C",863333
+"648","Ryan Merkley
+","SJS","D",863333
+"649","Matt Kiersted
+","FLA","D",858750
+"650","Cal Petersen
+","LAK","G",858333
+"651","Cole Schwindt
+","FLA","RW",855833
+"652","Santeri Hatakka
+","SJS","D",850833
+"653","Luke Schenn
+","VAN","D",850000
+"654","Jon Merrill
+","MIN","D",850000
+"655","Riley Sheahan
+","SEA","LW",850000
+"656","Sam Gagner
+","DET","C",850000
+"657","Gustav Lindstrom
+","DET","D",850000
+"658","Conor Timmins
+","ARI","D",850000
+"659","Devin Shore
+","EDM","C",850000
+"660","Caleb Jones
+","CHI","D",850000
+"661","Jeremy Lauzon
+","NSH","D",850000
+"662","Zach Bogosian
+","TBL","D",850000
+"663","Cal Foote
+","TBL","D",850000
+"664","Malcolm Subban
+","BUF","G",850000
+"665","Nicholas Abruzzese
+","TOR","C",850000
+"666","Matt Nieto
+","SJS","LW",850000
+"667","William Lockwood
+","VAN","RW",842500
+"668","Jacob Peterson
+","DAL","C",842500
+"669","Jesper Froden
+","BOS","RW",842500
+"670","Pyotr Kochetkov
+","CAR","G",842500
+"671","Jordan Harris
+","MTL","D",842500
+"672","Karel Vejmelka
+","ARI","G",842500
+"673","Philipp Kurashev
+","CHI","C",842500
+"674","Robin Salo
+","NYI","D",842500
+"675","Scott Reedy
+","SJS","C",842500
+"676","Jasper Weatherby
+","SJS","C",842500
+"677","Angus Crookshank
+","OTT","LW",838333
+"678","Jack Matier
+","NSH","D",838333
+"679","Kevin Mandolese
+","OTT","G",835000
+"680","Ryan McLeod
+","EDM","C",834167
+"681","Viktor Lodin
+","OTT","C",830000
+"682","Connor Dewar
+","MIN","C",825833
+"683","Scott Wedgewood
+","DAL","G",825000
+"684","Carter Rowney
+","DET","C",825000
+"685","Derick Brassard
+","EDM","C",825000
+"686","Kevin Connauton
+","PHI","D",825000
+"687","Zack MacEwen
+","PHI","C",825000
+"688","Nathan Bastian
+","NJD","RW",825000
+"689","Rasmus Asplund
+","BUF","C",825000
+"690","Mark Kastelic
+","OTT","C",821667
+"691","Carson Meyer
+","CBJ","RW",820000
+"692","Jordan Spence
+","LAK","D",820000
+"693","Linus Hogberg
+","PHI","D",815000
+"694","Mackenzie Entwistle
+","CHI","RW",811667
+"695","Oskar Steen
+","BOS","C",809167
+"696","Fabian Zetterlund
+","NJD","LW",809167
+"697","Simon Benoit
+","ANA","D",809166
+"698","Sean Durzi
+","LAK","D",809166
+"699","Adam Ruzicka
+","CGY","C",801666
+"700","Brad Hunt
+","VAN","D",8e+05
+"701","Spencer Martin
+","VAN","G",8e+05
+"702","Brad Richardson
+","VAN","RW",8e+05
+"703","Ty Lewis
+","CGY","LW",8e+05
+"704","Trevor Lewis
+","CGY","C",8e+05
+"705","Curtis Lazar
+","BOS","C",8e+05
+"706","Logan Thompson
+","VGK","G",8e+05
+"707","Magnus Hellberg
+","DET","G",8e+05
+"708","Brendan Smith
+","CAR","D",8e+05
+"709","Calvin Pickard
+","DET","G",8e+05
+"710","Kevin Lankinen
+","CHI","G",8e+05
+"711","Gerald Mayhew
+","ANA","C",8e+05
+"712","Erik Gustafsson
+","CHI","D",8e+05
+"713","Ben Harpur
+","NSH","D",8e+05
+"714","Tanner Jeannot
+","NSH","LW",8e+05
+"715","Nate Thompson
+","PHI","C",8e+05
+"716","Mason Marchment
+","FLA","LW",8e+05
+"717","Jimmy Vesey
+","NJD","LW",8e+05
+"718","Blake Lizotte
+","LAK","C",8e+05
+"719","Nikolai Knyzhov
+","SJS","D",796667
+"720","Fredrik Karlstrom
+","DAL","C",795000
+"721","Jason Robertson
+","DAL","LW",795000
+"722","Kevin Bahl
+","NJD","D",795000
+"723","Nicolas Hague
+","VGK","D",791667
+"724","Martin Fehervary
+","WAS","D",791667
+"725","Vladislav Kolyachonok
+","ARI","D",789167
+"726","Nikita Okhotyuk
+","NJD","D",789167
+"727","Niko Mikkola
+","STL","D",787500
+"728","Andrew Peeke
+","CBJ","D",787500
+"729","Arturs Silovs
+","VAN","G",786111
+"730","Jonah Gadjovich
+","SJS","LW",783333
+"731","Alexander Chmelevski
+","SJS","C",778333
+"732","Julien Gauthier
+","NYR","RW",775000
+"733","Alexei Toropchenko
+","STL","RW",775000
+"734","Kyle Capobianco
+","ARI","D",775000
+"735","Tyler Parsons
+","CGY","G",771750
+"736","Austin Strand
+","LAK","D",771750
+"737","Jack Studnicka
+","BOS","C",769167
+"738","Brady Keeper
+","VAN","D",762500
+"739","Dryden Hunt
+","NYR","LW",762500
+"740","Dylan Coghlan
+","VGK","D",762500
+"741","Kale Clague
+","MTL","D",761250
+"742","Boris Katchouk
+","CHI","LW",758333
+"743","Taylor Raddysh
+","CHI","RW",758333
+"744","Yegor Zamula
+","PHI","D",756667
+"745","Jonathan Dahlen
+","SJS","C",750000
+"746","Noah Gregor
+","SJS","C",750000
+"747","Jaycob Megna
+","SJS","D",750000
+"748","Nicholas Meloche
+","SJS","D",750000
+"749","Lane Pederson
+","SJS","C",750000
+"750","Jeffrey Truchon-Viel
+","SJS","LW",750000
+"751","Kyle Burroughs
+","VAN","D",750000
+"752","Alex Chiasson
+","VAN","RW",750000
+"753","Sheldon Dries
+","VAN","C",750000
+"754","Juho Lammikko
+","VAN","RW",750000
+"755","Nicolas Petan
+","VAN","C",750000
+"756","Oliver Kylington
+","CGY","D",750000
+"757","Joel Hanley
+","DAL","D",750000
+"758","Michael Stone
+","CGY","D",750000
+"759","Daniel Vladar
+","CGY","G",750000
+"760","Brandon Duhaime
+","MIN","RW",750000
+"761","Marian Studenic
+","DAL","RW",750000
+"762","Kevin Rooney
+","NYR","C",750000
+"763","Jonny Brodzinski
+","NYR","C",750000
+"764","Greg McKegg
+","NYR","C",750000
+"765","Ryan Donato
+","SEA","C",750000
+"766","Morgan Geekie
+","SEA","C",750000
+"767","Derrick Pouliot
+","SEA","D",750000
+"768","Michael Amadio
+","VGK","C",750000
+"769","Anton Blidh
+","BOS","LW",750000
+"770","Kyle Criscuolo
+","DET","C",750000
+"771","Turner Elson
+","DET","LW",750000
+"772","Ben Hutton
+","VGK","D",750000
+"773","Olli Juolevi
+","DET","D",750000
+"774","Nicolas Roy
+","VGK","C",750000
+"775","Givani Smith
+","DET","RW",750000
+"776","Jake Evans
+","MTL","C",750000
+"777","Laurent Dauphin
+","MTL","C",750000
+"778","Samuel Montembeault
+","MTL","G",750000
+"779","Michael Pezzetta
+","MTL","C",750000
+"780","Ryan Poehling
+","MTL","C",750000
+"781","Chris Wideman
+","MTL","D",750000
+"782","Tyler Bozak
+","STL","C",750000
+"783","Logan Brown
+","STL","C",750000
+"784","Ville Husso
+","STL","G",750000
+"785","Calle Rosen
+","STL","D",750000
+"786","Nathan Walker
+","STL","LW",750000
+"787","Nic Dowd
+","WAS","C",750000
+"788","Matt Irwin
+","WAS","D",750000
+"789","Axel Jonsson-Fjallby
+","WAS","LW",750000
+"790","Joe Snively
+","WAS","LW",750000
+"791","Sam Lafferty
+","CHI","C",750000
+"792","Travis Boyd
+","ARI","LW",750000
+"793","Michael Carcone
+","ARI","RW",750000
+"794","Cam Dineen
+","ARI","D",750000
+"795","Jeremy Davies
+","NSH","D",750000
+"796","Matt Luff
+","NSH","RW",750000
+"797","Michael McCarron
+","NSH","RW",750000
+"798","Mathieu Olivier
+","NSH","RW",750000
+"799","Alex Galchenyuk
+","ARI","C",750000
+"800","Bokondji Imama
+","ARI","LW",750000
+"801","Sam Carrick
+","ANA","C",750000
+"802","Patrick Brown
+","PHI","LW",750000
+"803","Trevor Carrick
+","ANA","D",750000
+"804","Samuel Morin
+","PHI","D",750000
+"805","Vinni Lettieri
+","ANA","C",750000
+"806","Dysin Mayo
+","ARI","D",750000
+"807","Felix Sandstrom
+","PHI","G",750000
+"808","Nick Seeler
+","PHI","D",750000
+"809","Joshua Mahura
+","ANA","D",750000
+"810","Liam O'Brien
+","ARI","C",750000
+"811","Eric Comrie
+","WPG","G",750000
+"812","Harri Sateri
+","ARI","G",750000
+"813","Evgeny Svechnikov
+","WPG","LW",750000
+"814","Dominic Toninato
+","WPG","C",750000
+"815","Lucas Carlsson
+","FLA","D",750000
+"816","Jack Johnson
+","COL","D",750000
+"817","Jonas Johansson
+","FLA","G",750000
+"818","Joe Thornton
+","FLA","C",750000
+"819","Dominik Simon
+","ANA","C",750000
+"820","Andrej Sustr
+","ANA","D",750000
+"821","Jon Gillies
+","NJD","G",750000
+"822","Andrew Hammond
+","NJD","G",750000
+"823","Colton White
+","NJD","D",750000
+"824","Brian Boyle
+","PIT","C",750000
+"825","Louis Domingue
+","PIT","G",750000
+"826","Chad Ruhwedel
+","PIT","D",750000
+"827","Joseph Anderson
+","TOR","RW",750000
+"828","Andrew Oglevie
+","BUF","C",750000
+"829","Craig Anderson
+","BUF","G",750000
+"830","Drake Caggiula
+","BUF","C",750000
+"831","Erik Källgren
+","TOR","G",750000
+"832","Jason Spezza
+","TOR","C",750000
+"833","John Hayden
+","BUF","C",750000
+"834","Michael Houser
+","BUF","G",750000
+"835","Nathan Gerbe
+","CBJ","LW",750000
+"836","Gavin Bayreuther
+","CBJ","D",750000
+"837","Justin Danforth
+","CBJ","RW",750000
+"838","Brendan Gaunce
+","CBJ","C",750000
+"839","Jacob Moverare
+","LAK","D",750000
+"840","Kieffer Bellows
+","NYI","LW",750000
+"841","Zdeno Chara
+","NYI","D",750000
+"842","Andy Greene
+","NYI","D",750000
+"843","Otto Koivula
+","NYI","LW",750000
+"844","Zach Parise
+","NYI","LW",750000
+"845","Alex Formenton
+","OTT","LW",747500
+"846","Mitchell Stephens
+","DET","C",737500
+"847","Mathieu Joseph
+","OTT","RW",737500
+"848","Alex Carrier
+","NSH","D",733333
+"849","Connor Ingram
+","NSH","G",733333
+"850","Parker Kelly
+","OTT","C",726667
+"851","Kaapo Kahkonen
+","SJS","G",725000
+"852","Madison Bowey
+","VAN","D",725000
+"853","Matthew Highmore
+","VAN","C",725000
+"854","Jacob Middleton
+","MIN","D",725000
+"855","Karson Kuhlman
+","SEA","RW",725000
+"856","Daniel Sprong
+","SEA","RW",725000
+"857","Keegan Kolesar
+","VGK","RW",725000
+"858","Zach Whitecloud
+","VGK","D",725000
+"859","Jake Walman
+","DET","D",725000
+"860","Steven Lorentz
+","CAR","C",725000
+"861","William Lagesson
+","MTL","D",725000
+"862","Jakub Zboril
+","BOS","D",725000
+"863","Yakov Trenin
+","NSH","C",725000
+"864","Adam Brooks
+","WPG","C",725000
+"865","Jansen Harkins
+","WPG","C",725000
+"866","Jacob MacDonald
+","COL","D",725000
+"867","Ryan Lomberg
+","FLA","LW",725000
+"868","Logan O'Connor
+","COL","C",725000
+"869","Nico Sturm
+","COL","C",725000
+"870","Mason Geertsen
+","NJD","D",725000
+"871","Mark Friedman
+","PIT","D",725000
+"872","Colin Blackwell
+","TOR","C",725000
+"873","Dustin Tokarski
+","BUF","G",725000
+"874","Gabriel Carlsson
+","CBJ","D",725000
+"875","Carl Grundstrom
+","LAK","RW",725000
+"876","Sebastian Aho
+","NYI","D",725000
+"877","Jake Bischoff
+","VGK","D",716667
+"878","Vitek Vanecek
+","WAS","G",716667
